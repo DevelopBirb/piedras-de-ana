@@ -1,6 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bsa5v0ittp6hq"]
+[gd_scene load_steps=9 format=3 uid="uid://bsa5v0ittp6hq"]
 
 [ext_resource type="PackedScene" uid="uid://2bqcavfcsc4h" path="res://Assets/Models/Rock.glb" id="3_tefeu"]
+[ext_resource type="Script" uid="uid://bc6pxgkpt6xn3" path="res://Scripts/state_machine.gd" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://ch75ubcweo5ea" path="res://scenes/stone_scene.tscn" id="5_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://cfk4dvr4xfsf3" path="res://scenes/ground.tscn" id="5_tefeu"]
 
@@ -36,3 +38,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.529341, 0, -2.47354)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0437016, -4.76837e-07, 1.99953)
 
 [node name="ground" parent="." instance=ExtResource("5_tefeu")]
+
+[node name="State Machine" type="Node3D" parent="."]
+script = ExtResource("4_jyhfs")
+
+[node name="StoneScene" parent="." instance=ExtResource("5_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.85816, -0.16003, -3.66549)
+
+[node name="StoneScene2" parent="." instance=ExtResource("5_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2373, -0.117261, -3.37617)

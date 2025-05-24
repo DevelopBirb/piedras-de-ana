@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ch75ubcweo5ea"]
+[gd_scene load_steps=8 format=3 uid="uid://ch75ubcweo5ea"]
 
 [ext_resource type="Script" uid="uid://cjhv5gsh2m2on" path="res://Scripts/stone_scene.gd" id="1_5u2ac"]
 [ext_resource type="PackedScene" uid="uid://2bqcavfcsc4h" path="res://Assets/Models/Rock.glb" id="1_6krfe"]
@@ -40,6 +40,8 @@ _data = {
 &"open": SubResource("Animation_ktxm8")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_5u2ac"]
+
 [node name="StoneScene" type="Node3D"]
 script = ExtResource("1_5u2ac")
 
@@ -58,3 +60,13 @@ transform = Transform3D(0.0879495, 0.961019, 0.262122, -0.988267, 0.117167, -0.0
 libraries = {
 &"": SubResource("AnimationLibrary_ucfkm")
 }
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.80103)
+shape = SubResource("BoxShape3D_5u2ac")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
