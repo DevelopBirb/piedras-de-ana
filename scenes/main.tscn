@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://bsa5v0ittp6hq"]
+
+[ext_resource type="PackedScene" uid="uid://2bqcavfcsc4h" path="res://Assets/Models/Rock.glb" id="3_tefeu"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://cfk4dvr4xfsf3" path="res://scenes/ground.tscn" id="5_tefeu"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sugp2"]
+sky_top_color = Color(0.368356, 0.369779, 0.482072, 1)
+sky_horizon_color = Color(0.60457, 0.585654, 0.602823, 1)
+ground_bottom_color = Color(0.231766, 0.154677, 0.111062, 1)
+ground_horizon_color = Color(0.60457, 0.585654, 0.602823, 1)
+
+[sub_resource type="Sky" id="Sky_jyhfs"]
+sky_material = SubResource("ProceduralSkyMaterial_sugp2")
+
+[sub_resource type="Environment" id="Environment_tbgi4"]
+background_mode = 2
+sky = SubResource("Sky_jyhfs")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_tbgi4")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+light_color = Color(0.847872, 0.683766, 0.539566, 1)
+shadow_enabled = true
+
+[node name="Rock2" parent="." instance=ExtResource("3_tefeu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.529341, 0, -2.47354)
+
+[node name="ProtoController" parent="." instance=ExtResource("5_tbgi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0437016, -4.76837e-07, 1.99953)
+
+[node name="ground" parent="." instance=ExtResource("5_tefeu")]

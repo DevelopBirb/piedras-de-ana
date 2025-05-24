@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://ch75ubcweo5ea"]
+
+[ext_resource type="Script" uid="uid://cjhv5gsh2m2on" path="res://Scripts/stone_scene.gd" id="1_5u2ac"]
+[ext_resource type="PackedScene" uid="uid://2bqcavfcsc4h" path="res://Assets/Models/Rock.glb" id="1_6krfe"]
+[ext_resource type="PackedScene" uid="uid://bdydcfxdjrts8" path="res://Assets/Models/found_head.glb" id="2_ktxm8"]
+
+[sub_resource type="Animation" id="Animation_5u2ac"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ktxm8"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-1.49292, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ucfkm"]
+_data = {
+&"RESET": SubResource("Animation_5u2ac"),
+&"open": SubResource("Animation_ktxm8")
+}
+
+[node name="StoneScene" type="Node3D"]
+script = ExtResource("1_5u2ac")
+
+[node name="Hinge" type="Node3D" parent="."]
+
+[node name="Rock2" parent="Hinge" instance=ExtResource("1_6krfe")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.0439922, 0.511324)
+
+[node name="ObjectContainer" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.560005, 0.51851)
+
+[node name="found_head" parent="ObjectContainer" instance=ExtResource("2_ktxm8")]
+transform = Transform3D(0.0879495, 0.961019, 0.262122, -0.988267, 0.117167, -0.0979779, -0.124871, -0.25043, 0.960048, -0.257711, 0.473875, 0.120393)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ucfkm")
+}
