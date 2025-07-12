@@ -18,6 +18,7 @@ extends CharacterBody3D
 ## ADDED: Can we look around?
 @export var can_look_around : bool = true
 
+
 @export_group("Speeds")
 ## Look around rotation speed.
 @export var look_speed : float = 0.002
@@ -29,6 +30,10 @@ extends CharacterBody3D
 @export var sprint_speed : float = 10.0
 ## How fast do we freefly?
 @export var freefly_speed : float = 25.0
+
+@export_group("Camera")
+@export var zoom_fov : float = 43
+@export var normal_fov : float = 75
 
 @export_group("Input Actions")
 ## Name of Input Action to move Left.
@@ -59,6 +64,8 @@ func _ready() -> void:
 	check_input_mappings()
 	look_rotation.y = rotation.y
 	look_rotation.x = head.rotation.x
+	GlobalSignal.open_stone.connect(move_self_lock_and_look)
+	GlobalSignal.close_stone.connect(unlock_and_zoom_out)
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Mouse capturing
@@ -115,10 +122,33 @@ func _physics_process(delta: float) -> void:
 			velocity.z = move_toward(velocity.z, 0, move_speed)
 	else:
 		velocity.x = 0
-		velocity.y = 0
+		velocity.z = 0
 	
 	# Use velocity to actually move
 	move_and_slide()
+
+func move_self_lock_and_look(destination : Vector3):
+	var tween := create_tween()
+	tween.tween_property(self, ^"position", destination, 0.5)
+	can_move = false
+	has_gravity = false
+	zoom_in()
+	$Head/handsanimated.get_node("AnimationPlayer").play("liftrock")
+
+func unlock_and_zoom_out() -> void:
+	can_move = true
+	has_gravity = true
+	zoom_out()
+	$Head/handsanimated.get_node("AnimationPlayer").play("droprock")
+
+
+func zoom_in() ->void:
+	var tween := create_tween()
+	tween.tween_property($Head/Camera3D, ^"fov", zoom_fov, 0.5)
+
+func zoom_out() ->void:
+	var tween := create_tween()
+	tween.tween_property($Head/Camera3D, ^"fov", normal_fov, 0.5)
 
 
 ## Rotate us to look around.

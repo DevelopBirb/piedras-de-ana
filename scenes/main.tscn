@@ -1,10 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://bsa5v0ittp6hq"]
+[gd_scene load_steps=16 format=3 uid="uid://bsa5v0ittp6hq"]
 
 [ext_resource type="PackedScene" uid="uid://2bqcavfcsc4h" path="res://Assets/Models/Rock.glb" id="3_tefeu"]
 [ext_resource type="Script" uid="uid://bc6pxgkpt6xn3" path="res://Scripts/state_machine.gd" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://ch75ubcweo5ea" path="res://scenes/stone_scene.tscn" id="5_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://cfk4dvr4xfsf3" path="res://scenes/ground.tscn" id="5_tefeu"]
+[ext_resource type="Script" uid="uid://cjhv5gsh2m2on" path="res://Scripts/stone_scene.gd" id="6_tipki"]
+[ext_resource type="ArrayMesh" uid="uid://bpo6rbh70t7a8" path="res://Assets/Models/Rocks/rock24.res" id="7_85g3d"]
+[ext_resource type="PackedScene" uid="uid://bdydcfxdjrts8" path="res://Assets/Models/found_head.glb" id="8_choun"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sugp2"]
 sky_top_color = Color(0.368356, 0.369779, 0.482072, 1)
@@ -21,13 +24,52 @@ sky = SubResource("Sky_jyhfs")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="Animation" id="Animation_5u2ac"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ktxm8"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.731293, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ucfkm"]
+_data = {
+&"RESET": SubResource("Animation_5u2ac"),
+&"open": SubResource("Animation_ktxm8")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5u2ac"]
+size = Vector3(1.715, 1.145, 1.505)
+
 [node name="Node3D" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_tbgi4")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+transform = Transform3D(0.848048, 0.519464, 0.104742, 0, -0.197657, 0.980272, 0.529919, -0.831317, -0.167623, 0, 0, 0)
 light_color = Color(0.847872, 0.683766, 0.539566, 1)
 shadow_enabled = true
 
@@ -45,5 +87,34 @@ script = ExtResource("4_jyhfs")
 [node name="StoneScene" parent="." instance=ExtResource("5_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.85816, -0.16003, -3.66549)
 
-[node name="StoneScene2" parent="." instance=ExtResource("5_o6xl0")]
+[node name="StoneScene2" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2373, -0.117261, -3.37617)
+script = ExtResource("6_tipki")
+
+[node name="Hinge" type="Node3D" parent="StoneScene2"]
+
+[node name="Rock24" type="MeshInstance3D" parent="StoneScene2/Hinge"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.177058, 0.696594)
+mesh = ExtResource("7_85g3d")
+
+[node name="ObjectContainer" type="Node3D" parent="StoneScene2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.560005, 0.51851)
+
+[node name="found_head" parent="StoneScene2/ObjectContainer" instance=ExtResource("8_choun")]
+transform = Transform3D(0.0879495, 0.961019, 0.262122, -0.988267, 0.117167, -0.0979779, -0.124871, -0.25043, 0.960048, -0.257711, 0.473875, 0.120393)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StoneScene2"]
+libraries = {
+&"": SubResource("AnimationLibrary_ucfkm")
+}
+
+[node name="Area3D" type="Area3D" parent="StoneScene2"]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StoneScene2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.72478)
+shape = SubResource("BoxShape3D_5u2ac")
+
+[connection signal="state_changed" from="State Machine" to="ProtoController" method="_on_state_machine_state_changed"]
+[connection signal="body_entered" from="StoneScene2/Area3D" to="StoneScene2" method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="StoneScene2/Area3D" to="StoneScene2" method="_on_area_3d_body_exited"]

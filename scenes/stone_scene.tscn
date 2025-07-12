@@ -31,7 +31,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(-1.49292, 0, 0)]
+"values": [Vector3(0, 0, 0), Vector3(-0.731293, 0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ucfkm"]
@@ -41,6 +41,7 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5u2ac"]
+size = Vector3(1.715, 1.145, 1.505)
 
 [node name="StoneScene" type="Node3D"]
 script = ExtResource("1_5u2ac")
@@ -65,7 +66,7 @@ libraries = {
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.80103)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.72478)
 shape = SubResource("BoxShape3D_5u2ac")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

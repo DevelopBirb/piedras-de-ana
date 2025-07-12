@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bs72ogkvdd7d6"]
+[gd_scene load_steps=8 format=3 uid="uid://bs72ogkvdd7d6"]
 
 [ext_resource type="Script" uid="uid://dddch4wuykb1n" path="res://addons/proto_controller/proto_controller.gd" id="1_ucva2"]
 [ext_resource type="PackedScene" uid="uid://dbvvbh23b2fau" path="res://Assets/Models/Left_hand.glb" id="2_5hfox"]
 [ext_resource type="PackedScene" uid="uid://dw1nw024sarbm" path="res://Assets/Models/Right_hand.glb" id="3_6dqce"]
+[ext_resource type="PackedScene" uid="uid://5rejfcfrkkmm" path="res://scenes/handsanimated.tscn" id="5_0rk7u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
 albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
@@ -38,6 +39,11 @@ transform = Transform3D(1, 0, 0, 0, 0.53833, 0.842734, 0, -0.842734, 0.53833, 0,
 
 [node name="Left_hand" parent="Head" instance=ExtResource("2_5hfox")]
 transform = Transform3D(0.14525, 0, 0, 0, 0.14525, 0, 0, 0, 0.14525, -0.24021, -0.333811, -0.0212548)
+visible = false
 
 [node name="Right_hand" parent="Head" instance=ExtResource("3_6dqce")]
 transform = Transform3D(0.14525, 0, 0, 0, 0.14525, 0, 0, 0, 0.14525, 0.185142, -0.333811, -0.0212548)
+visible = false
+
+[node name="handsanimated" parent="Head" instance=ExtResource("5_0rk7u")]
+transform = Transform3D(0.176872, 0, 0, 0, 0.176797, 0.00514542, 0, -0.00514542, 0.176797, 0.0172468, -0.245086, -0.0924383)
