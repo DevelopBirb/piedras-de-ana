@@ -36,6 +36,7 @@ shape = SubResource("CapsuleShape3D_iof21")
 transform = Transform3D(1, 0, 0, 0, 0.53833, 0.842734, 0, -0.842734, 0.53833, 0, 1.7, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
+fov = 100.0
 
 [node name="Left_hand" parent="Head" instance=ExtResource("2_5hfox")]
 transform = Transform3D(0.14525, 0, 0, 0, 0.14525, 0, 0, 0, 0.14525, -0.24021, -0.333811, -0.0212548)

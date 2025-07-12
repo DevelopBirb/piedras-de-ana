@@ -1,13 +1,15 @@
-[gd_scene load_steps=16 format=3 uid="uid://bsa5v0ittp6hq"]
+[gd_scene load_steps=18 format=3 uid="uid://bsa5v0ittp6hq"]
 
 [ext_resource type="PackedScene" uid="uid://2bqcavfcsc4h" path="res://Assets/Models/Rock.glb" id="3_tefeu"]
 [ext_resource type="Script" uid="uid://bc6pxgkpt6xn3" path="res://Scripts/state_machine.gd" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://ch75ubcweo5ea" path="res://scenes/stone_scene.tscn" id="5_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="5_tbgi4"]
-[ext_resource type="PackedScene" uid="uid://cfk4dvr4xfsf3" path="res://scenes/ground.tscn" id="5_tefeu"]
+[ext_resource type="PackedScene" uid="uid://cfk4dvr4xfsf3" path="res://scenes/ground scenes/ground.tscn" id="5_tefeu"]
 [ext_resource type="Script" uid="uid://cjhv5gsh2m2on" path="res://Scripts/stone_scene.gd" id="6_tipki"]
 [ext_resource type="ArrayMesh" uid="uid://bpo6rbh70t7a8" path="res://Assets/Models/Rocks/rock24.res" id="7_85g3d"]
 [ext_resource type="PackedScene" uid="uid://bdydcfxdjrts8" path="res://Assets/Models/found_head.glb" id="8_choun"]
+[ext_resource type="PackedScene" uid="uid://bnbpxrtigiky2" path="res://scenes/ground scenes/suelo_2.tscn" id="9_85g3d"]
+[ext_resource type="PackedScene" uid="uid://cop38ne3pvu1m" path="res://scenes/plant scenes/palmito_1.tscn" id="10_choun"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sugp2"]
 sky_top_color = Color(0.368356, 0.369779, 0.482072, 1)
@@ -80,6 +82,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.529341, 0, -2.47354)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0437016, -4.76837e-07, 1.99953)
 
 [node name="ground" parent="." instance=ExtResource("5_tefeu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -19.419, 0)
 
 [node name="State Machine" type="Node3D" parent="."]
 script = ExtResource("4_jyhfs")
@@ -88,7 +91,7 @@ script = ExtResource("4_jyhfs")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.85816, -0.16003, -3.66549)
 
 [node name="StoneScene2" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2373, -0.117261, -3.37617)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2373, 0.485014, -3.37617)
 script = ExtResource("6_tipki")
 
 [node name="Hinge" type="Node3D" parent="StoneScene2"]
@@ -114,6 +117,12 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StoneScene2/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.72478)
 shape = SubResource("BoxShape3D_5u2ac")
+
+[node name="suelo2" parent="." instance=ExtResource("9_85g3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.54234, -3.48157, -11.7345)
+
+[node name="palmito1" parent="." instance=ExtResource("10_choun")]
+transform = Transform3D(1.85884, 0, 1.02051, 0, 2.12055, 0, -1.02051, 0, 1.85884, 6.42045, -0.843046, 0.345718)
 
 [connection signal="state_changed" from="State Machine" to="ProtoController" method="_on_state_machine_state_changed"]
 [connection signal="body_entered" from="StoneScene2/Area3D" to="StoneScene2" method="_on_area_3d_body_entered"]

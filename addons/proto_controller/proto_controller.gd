@@ -33,7 +33,7 @@ extends CharacterBody3D
 
 @export_group("Camera")
 @export var zoom_fov : float = 43
-@export var normal_fov : float = 75
+@export var normal_fov : float = 100
 
 @export_group("Input Actions")
 ## Name of Input Action to move Left.
