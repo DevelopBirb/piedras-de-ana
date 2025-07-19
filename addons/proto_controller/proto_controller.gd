@@ -59,6 +59,9 @@ var freeflying : bool = false
 ## IMPORTANT REFERENCES
 @onready var head: Node3D = $Head
 @onready var collider: CollisionShape3D = $Collider
+@onready var footstep_audio: AudioStreamPlayer3D = $FootstepAudio
+@onready var headbob_animation: AnimationPlayer = $HeadbobAnimation
+
 
 func _ready() -> void:
 	check_input_mappings()
@@ -117,12 +120,15 @@ func _physics_process(delta: float) -> void:
 		if move_dir:
 			velocity.x = move_dir.x * move_speed
 			velocity.z = move_dir.z * move_speed
+			headbob_animation.play("walk_headbob_&_footstep")
 		else:
 			velocity.x = move_toward(velocity.x, 0, move_speed)
 			velocity.z = move_toward(velocity.z, 0, move_speed)
+			headbob_animation.pause()
 	else:
 		velocity.x = 0
 		velocity.z = 0
+		headbob_animation.pause()
 	
 	# Use velocity to actually move
 	move_and_slide()
@@ -149,6 +155,11 @@ func zoom_in() ->void:
 func zoom_out() ->void:
 	var tween := create_tween()
 	tween.tween_property($Head/Camera3D, ^"fov", normal_fov, 0.5)
+	
+
+func play_footstep() ->void:
+	footstep_audio.pitch_scale = randf_range(0.7, 1)
+	footstep_audio.play()
 
 
 ## Rotate us to look around.

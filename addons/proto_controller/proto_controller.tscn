@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bs72ogkvdd7d6"]
+[gd_scene load_steps=10 format=3 uid="uid://bs72ogkvdd7d6"]
 
 [ext_resource type="Script" uid="uid://dddch4wuykb1n" path="res://addons/proto_controller/proto_controller.gd" id="1_ucva2"]
-[ext_resource type="PackedScene" uid="uid://dbvvbh23b2fau" path="res://Assets/Models/Left_hand.glb" id="2_5hfox"]
-[ext_resource type="PackedScene" uid="uid://dw1nw024sarbm" path="res://Assets/Models/Right_hand.glb" id="3_6dqce"]
+[ext_resource type="AudioStream" uid="uid://bsag5cgnf3dyy" path="res://Assets/sounds/st1-footstep-sfx-323053.mp3" id="3_5hfox"]
 [ext_resource type="PackedScene" uid="uid://5rejfcfrkkmm" path="res://scenes/handsanimated.tscn" id="5_0rk7u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
@@ -15,6 +14,84 @@ height = 1.8
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_iof21"]
 radius = 0.4
 height = 1.8
+
+[sub_resource type="Animation" id="Animation_wr06p"]
+resource_name = "walk_headbob_&_footstep"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.19, 0.433333, 0.633333, 0.866667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.0435485, -0.0681733), Vector3(0, -0.000628114, -0.000983238), Vector3(0, -0.0352876, -0.0552412), Vector3(0, 0.022393, 0.0350555), Vector3(0, 0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"play_footstep"
+}, {
+"args": [],
+"method": &"play_footstep"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Head/handsanimated:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.23, 0.48, 0.73, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.0287739, 0.0320141, -0.0200835), Vector3(-0.0264195, 0.0923695, -0.0579023), Vector3(-0.0287739, 0.0320141, -0.0200835), Vector3(-0.0264195, 0.0923695, -0.0579023), Vector3(-0.0287739, 0.0320141, -0.0200835)]
+}
+
+[sub_resource type="Animation" id="Animation_5hfox"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/handsanimated:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.0287739, 0.0320141, -0.0200835)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5hfox"]
+_data = {
+&"RESET": SubResource("Animation_5hfox"),
+&"walk_headbob_&_footstep": SubResource("Animation_wr06p")
+}
 
 [node name="ProtoController" type="CharacterBody3D"]
 collision_layer = 3
@@ -36,15 +113,18 @@ shape = SubResource("CapsuleShape3D_iof21")
 transform = Transform3D(1, 0, 0, 0, 0.53833, 0.842734, 0, -0.842734, 0.53833, 0, 1.7, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 2.98023e-08, 0, -2.98023e-08, 1, 0, 0, 0)
 fov = 100.0
 
-[node name="Left_hand" parent="Head" instance=ExtResource("2_5hfox")]
-transform = Transform3D(0.14525, 0, 0, 0, 0.14525, 0, 0, 0, 0.14525, -0.24021, -0.333811, -0.0212548)
-visible = false
-
-[node name="Right_hand" parent="Head" instance=ExtResource("3_6dqce")]
-transform = Transform3D(0.14525, 0, 0, 0, 0.14525, 0, 0, 0, 0.14525, 0.185142, -0.333811, -0.0212548)
-visible = false
-
 [node name="handsanimated" parent="Head" instance=ExtResource("5_0rk7u")]
-transform = Transform3D(0.176872, 0, 0, 0, 0.176797, 0.00514542, 0, -0.00514542, 0.176797, 0.0172468, -0.245086, -0.0924383)
+transform = Transform3D(0.176749, 0.00338729, 0.00565909, -0.00355049, 0.176763, 0.0050886, -0.00555816, -0.00519866, 0.176708, 0.0172468, -0.267628, -0.0780386)
+
+[node name="FootstepAudio" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_5hfox")
+volume_db = 2.632
+autoplay = true
+
+[node name="HeadbobAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_5hfox")
+}
