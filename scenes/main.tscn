@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bsa5v0ittp6hq"]
+[gd_scene load_steps=29 format=3 uid="uid://bsa5v0ittp6hq"]
 
 [ext_resource type="PackedScene" uid="uid://2bqcavfcsc4h" path="res://Assets/Models/Rock.glb" id="3_tefeu"]
 [ext_resource type="Script" uid="uid://bc6pxgkpt6xn3" path="res://Scripts/state_machine.gd" id="4_jyhfs"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://c6ywlsfovgasv" path="res://Assets/Models/interest objects/wasp_nest.glb" id="12_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://c2e7nccsjw1lw" path="res://Assets/Models/interest objects/langosta_gigante.glb" id="13_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://umf7nh0f2kce" path="res://Assets/Models/stone_wall.glb" id="14_muem4"]
+[ext_resource type="PackedScene" uid="uid://d1vc8l8ttjyus" path="res://Assets/Models/ground/ground_environment.glb" id="17_muem4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sugp2"]
 sky_top_color = Color(0.368356, 0.369779, 0.482072, 1)
@@ -251,12 +252,16 @@ shape = SubResource("BoxShape3D_0ld40")
 
 [node name="suelo2" parent="." instance=ExtResource("9_85g3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.54234, -3.48157, -11.7345)
+visible = false
 
 [node name="palmito1" parent="." instance=ExtResource("10_choun")]
 transform = Transform3D(1.85884, 0, 1.02051, 0, 2.12055, 0, -1.02051, 0, 1.85884, 6.42045, -0.843046, 0.345718)
 
 [node name="stone_wall2" parent="." instance=ExtResource("14_muem4")]
 transform = Transform3D(-0.196818, -0.180511, 0.96368, -0.0255503, 0.983516, 0.179009, -0.980107, 0.0106098, -0.198186, -9.98797, -1.4584, -20.5589)
+
+[node name="ground_environment" parent="." instance=ExtResource("17_muem4")]
+transform = Transform3D(0.43015, 0, 0, 0, 0.43015, 0, 0, 0, 0.43015, -2.47135, -3.42243, -11.7192)
 
 [connection signal="state_changed" from="State Machine" to="ProtoController" method="_on_state_machine_state_changed"]
 [connection signal="body_entered" from="StoneScene4/Area3D" to="StoneScene4" method="_on_area_3d_body_entered"]
