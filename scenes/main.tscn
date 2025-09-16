@@ -19,16 +19,22 @@
 [ext_resource type="PackedScene" uid="uid://d1vc8l8ttjyus" path="res://Assets/Models/ground/ground_environment.glb" id="17_muem4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sugp2"]
-sky_top_color = Color(0.368356, 0.369779, 0.482072, 1)
-sky_horizon_color = Color(0.60457, 0.585654, 0.602823, 1)
-ground_bottom_color = Color(0.231766, 0.154677, 0.111062, 1)
-ground_horizon_color = Color(0.60457, 0.585654, 0.602823, 1)
+sky_top_color = Color(0.547212, 0.772355, 0.975433, 1)
+sky_horizon_color = Color(0.301448, 0.145851, 0.0307396, 1)
+sky_curve = 0.139955
+ground_bottom_color = Color(0.311417, 0.213569, 0.158244, 1)
+ground_horizon_color = Color(0.550989, 0.513942, 0.485285, 1)
+ground_curve = 0.16
+ground_energy_multiplier = 13.69
+sun_angle_max = 360.0
+sun_curve = 0.15
 
 [sub_resource type="Sky" id="Sky_jyhfs"]
 sky_material = SubResource("ProceduralSkyMaterial_sugp2")
 
 [sub_resource type="Environment" id="Environment_tbgi4"]
 background_mode = 2
+background_energy_multiplier = 0.4
 sky = SubResource("Sky_jyhfs")
 tonemap_mode = 2
 glow_enabled = true
@@ -117,8 +123,8 @@ size = Vector3(1.715, 1.145, 1.505)
 environment = SubResource("Environment_tbgi4")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.848048, 0.519464, 0.104742, 0, -0.197657, 0.980272, 0.529919, -0.831317, -0.167623, 0, 0, 0)
-light_color = Color(0.847872, 0.683766, 0.539566, 1)
+transform = Transform3D(0.35063, 0.712341, -0.60797, 0.0312968, 0.639909, 0.767813, 0.935991, -0.288246, 0.202078, 0, 0, 0)
+light_color = Color(0.93287, 0.919054, 0.868994, 1)
 shadow_enabled = true
 
 [node name="Rock2" parent="." instance=ExtResource("3_tefeu")]

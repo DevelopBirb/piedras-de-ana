@@ -37,5 +37,9 @@ bones/32/rotation = Quaternion(0.0378366, -0.00251587, -0.00744734, 0.999253)
 bones/33/rotation = Quaternion(0.0123897, -0.0101587, 0.236127, 0.97159)
 bones/34/rotation = Quaternion(-0.0250292, -0.0926302, -0.117445, 0.988433)
 
+[node name="hand_004" parent="LP_hands/Skeleton3D" index="0"]
+cast_shadow = 0
+gi_mode = 0
+
 [node name="AnimationPlayer" parent="." index="1"]
 speed_scale = 0.677
