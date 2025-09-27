@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dswfhai26lrmy"]
+
+[ext_resource type="PackedScene" uid="uid://b1iog5ifhqdhk" path="res://Assets/Models/interest objects/milipedeanimado.glb" id="1_ytpu7"]
+
+[node name="milipedeanimado" instance=ExtResource("1_ytpu7")]
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/0/rotation = Quaternion(4.1587864e-08, -4.4097344e-09, -0.09248647, 0.99571395)
+bones/1/rotation = Quaternion(0.013972076, 0.0025351404, 0.17851783, 0.98383427)
+bones/2/rotation = Quaternion(-0.014175811, 0.0008324555, 0.058616802, 0.99817955)
+bones/3/rotation = Quaternion(-4.090971e-08, 4.224707e-09, -0.17094031, 0.9852814)
+bones/4/rotation = Quaternion(-5.9782025e-08, 5.8717187e-09, -0.24219698, 0.9702271)
+bones/5/rotation = Quaternion(1.01432e-07, -1.344164e-08, 0.43170136, 0.9020166)
+bones/6/rotation = Quaternion(0.010369486, -0.0026886046, -0.2509662, 0.9679366)
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "roll"

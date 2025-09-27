@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bsa5v0ittp6hq"]
+[gd_scene load_steps=34 format=3 uid="uid://bsa5v0ittp6hq"]
 
 [ext_resource type="PackedScene" uid="uid://2bqcavfcsc4h" path="res://Assets/Models/Rock.glb" id="3_tefeu"]
 [ext_resource type="Script" uid="uid://bc6pxgkpt6xn3" path="res://Scripts/state_machine.gd" id="4_jyhfs"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://cjhv5gsh2m2on" path="res://Scripts/stone_scene.gd" id="6_tipki"]
 [ext_resource type="ArrayMesh" uid="uid://bpo6rbh70t7a8" path="res://Assets/Models/Rocks/rock24.res" id="7_85g3d"]
 [ext_resource type="ArrayMesh" uid="uid://br6fjg2b5hfnu" path="res://Assets/Models/Rocks/rock04.res" id="7_jkv2x"]
+[ext_resource type="PackedScene" uid="uid://dc0qgqgvfmcil" path="res://Assets/Models/interest objects/cochinitanimadawalking.tscn" id="8_0ld40"]
 [ext_resource type="PackedScene" uid="uid://bdydcfxdjrts8" path="res://Assets/Models/found_head.glb" id="8_choun"]
 [ext_resource type="PackedScene" uid="uid://bnbpxrtigiky2" path="res://scenes/ground scenes/suelo_2.tscn" id="9_85g3d"]
 [ext_resource type="PackedScene" uid="uid://cop38ne3pvu1m" path="res://scenes/plant scenes/palmito_1.tscn" id="10_choun"]
@@ -16,7 +17,11 @@
 [ext_resource type="PackedScene" uid="uid://c6ywlsfovgasv" path="res://Assets/Models/interest objects/wasp_nest.glb" id="12_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://c2e7nccsjw1lw" path="res://Assets/Models/interest objects/langosta_gigante.glb" id="13_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://umf7nh0f2kce" path="res://Assets/Models/stone_wall.glb" id="14_muem4"]
-[ext_resource type="PackedScene" uid="uid://d1vc8l8ttjyus" path="res://Assets/Models/ground/ground_environment.glb" id="17_muem4"]
+[ext_resource type="AudioStream" uid="uid://bsag5cgnf3dyy" path="res://Assets/sounds/st1-footstep-sfx-323053.mp3" id="14_yc10j"]
+[ext_resource type="PackedScene" uid="uid://dswfhai26lrmy" path="res://Assets/Models/interest objects/milipedeanimado.tscn" id="18_dp3eg"]
+[ext_resource type="PackedScene" uid="uid://c80cnjfelek5g" path="res://Assets/Models/interest objects/escarabajito.tscn" id="20_gqmmt"]
+[ext_resource type="PackedScene" uid="uid://d1vc8l8ttjyus" path="res://Assets/Models/ground/ground_environment.glb" id="20_jscy8"]
+[ext_resource type="Material" uid="uid://dxqetiec4d48e" path="res://Assets/Models/more interest objects/more_interest_objects.tres" id="21_yc10j"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sugp2"]
 sky_top_color = Color(0.547212, 0.772355, 0.975433, 1)
@@ -139,6 +144,9 @@ script = ExtResource("4_jyhfs")
 [node name="StoneScene" parent="." instance=ExtResource("5_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 0.999989, -0.00467747, 0, 0.00467747, 0.999989, 14.276515, 1.5830022, -14.63281)
 
+[node name="cochinitanimada" parent="." instance=ExtResource("8_0ld40")]
+transform = Transform3D(3.05522, 0, 0.98474896, 0, 3.21, 0, -0.98474896, 0, 3.05522, 21.794046, 1.30347, -3.592572)
+
 [node name="StoneScene4" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.0787, 0.920492, -2.9022)
 script = ExtResource("6_tipki")
@@ -228,6 +236,7 @@ shape = SubResource("BoxShape3D_0ld40")
 [node name="StoneScene3" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.82885, 1.0402607, -4.4566927)
 script = ExtResource("6_tipki")
+open_sound = ExtResource("14_yc10j")
 
 [node name="Hinge" type="Node3D" parent="StoneScene3"]
 
@@ -237,6 +246,9 @@ mesh = ExtResource("7_85g3d")
 
 [node name="ObjectContainer" type="Node3D" parent="StoneScene3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.560005, 0.51851)
+
+[node name="milipedeanimado" parent="StoneScene3/ObjectContainer" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.13244611, -0.008099411, 0.21187833, 0.017876817, 0.24935462, -0.0016428758, -0.21127819, 0.01602121, 0.13268338, 0.10496712, 0.63168997, 0.23372412)
 
 [node name="wasp_nest" parent="StoneScene3/ObjectContainer" instance=ExtResource("12_jkv2x")]
 transform = Transform3D(0.761237, 0, 0, 0, 0.761237, 0, 0, 0, 0.761237, -0.160691, 0.611111, 0.507949)
@@ -263,8 +275,50 @@ transform = Transform3D(1.85884, 0, 1.02051, 0, 2.12055, 0, -1.02051, 0, 1.85884
 [node name="stone_wall2" parent="." instance=ExtResource("14_muem4")]
 transform = Transform3D(-0.196818, -0.180511, 0.96368, -0.0255503, 0.983516, 0.179009, -0.980107, 0.0106098, -0.198186, -9.98797, -1.4584, -20.5589)
 
-[node name="ground_environment" parent="." instance=ExtResource("17_muem4")]
+[node name="ground_environment" parent="." instance=ExtResource("20_jscy8")]
 transform = Transform3D(0.43015, 0, 0, 0, 0.43015, 0, 0, 0, 0.43015, -2.4724061, -3.3943577, -11.740482)
+metadata/_edit_lock_ = true
+
+[node name="escarabajito" parent="." instance=ExtResource("20_gqmmt")]
+transform = Transform3D(2.0883164, -0.20349751, 1.8841238, 0.290781, 2.8049014, -0.019347103, -1.8726399, 0.2086065, 2.0981188, 21.294897, 1.3091009, -3.2256634)
+
+[node name="Skeleton3D" parent="escarabajito/Armature" index="0"]
+bones/1/rotation = Quaternion(-0.60896206, -0.45524764, -0.041599568, 0.6482162)
+bones/2/rotation = Quaternion(0.3299141, 0.3714921, -0.3990529, 0.7706537)
+bones/3/rotation = Quaternion(0.4716691, 0.4564403, 0.08805175, 0.74929124)
+bones/4/rotation = Quaternion(-0.5224135, -0.3736607, -0.061393723, 0.7639978)
+bones/5/rotation = Quaternion(-0.692294, -0.31680253, -0.3637045, 0.5367348)
+bones/6/rotation = Quaternion(-0.4607356, -0.17372896, -0.27796957, 0.8247872)
+bones/7/rotation = Quaternion(-0.11825485, -0.042966682, 0.058756437, 0.99031174)
+bones/8/rotation = Quaternion(0.1553574, -0.049842473, 0.07839008, 0.983481)
+bones/9/rotation = Quaternion(0.8195131, 0.25651437, 0.25847292, -0.44248214)
+bones/10/rotation = Quaternion(-0.45928067, -0.09086483, -0.13851948, 0.87270683)
+bones/11/rotation = Quaternion(-0.11404814, 0.032205716, -0.12823424, 0.9846379)
+bones/12/rotation = Quaternion(0.26911217, 0.03060214, 0.04907124, 0.961371)
+bones/13/rotation = Quaternion(-0.15101461, -0.22307336, -0.22307333, 0.9368411)
+bones/14/rotation = Quaternion(-0.60896206, 0.45524764, 0.041599568, 0.6482162)
+bones/15/rotation = Quaternion(0.3299141, -0.3714921, 0.3990529, 0.7706537)
+bones/16/rotation = Quaternion(0.4716691, -0.4564403, -0.08805175, 0.74929124)
+bones/17/rotation = Quaternion(-0.5224135, 0.3736607, 0.061393723, 0.7639978)
+bones/18/rotation = Quaternion(-0.692294, 0.31680253, 0.3637045, 0.5367348)
+bones/19/rotation = Quaternion(-0.4607356, 0.17372896, 0.27796957, 0.8247872)
+bones/20/rotation = Quaternion(-0.11825485, 0.042966682, -0.058756437, 0.99031174)
+bones/21/rotation = Quaternion(0.1553574, 0.049842473, -0.07839008, 0.983481)
+bones/22/rotation = Quaternion(0.8195131, -0.25651437, -0.25847292, -0.44248214)
+bones/23/rotation = Quaternion(-0.45928067, 0.09086483, 0.13851948, 0.87270683)
+bones/24/rotation = Quaternion(-0.11404814, -0.032205716, 0.12823424, 0.9846379)
+bones/25/rotation = Quaternion(0.26911217, -0.03060214, -0.04907124, 0.961371)
+bones/26/rotation = Quaternion(-0.15101461, 0.22307336, 0.22307333, 0.9368411)
+
+[node name="Icosphere" parent="escarabajito/Armature/Skeleton3D" index="0"]
+surface_material_override/0 = ExtResource("21_yc10j")
+
+[node name="StoneScene6" parent="." instance=ExtResource("5_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.002016, -1.6892309, 0)
+
+[node name="StoneScene7" parent="." instance=ExtResource("5_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5644784, -2.0312853, 0)
+open_sound = ExtResource("14_yc10j")
 
 [connection signal="state_changed" from="State Machine" to="ProtoController" method="_on_state_machine_state_changed"]
 [connection signal="body_entered" from="StoneScene4/Area3D" to="StoneScene4" method="_on_area_3d_body_entered"]
@@ -275,3 +329,5 @@ transform = Transform3D(0.43015, 0, 0, 0, 0.43015, 0, 0, 0, 0.43015, -2.4724061,
 [connection signal="body_exited" from="StoneScene5/Area3D" to="StoneScene5" method="_on_area_3d_body_exited"]
 [connection signal="body_entered" from="StoneScene3/Area3D" to="StoneScene3" method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="StoneScene3/Area3D" to="StoneScene3" method="_on_area_3d_body_exited"]
+
+[editable path="escarabajito"]

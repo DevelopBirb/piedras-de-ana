@@ -61,6 +61,7 @@ var freeflying : bool = false
 @onready var collider: CollisionShape3D = $Collider
 @onready var footstep_audio: AudioStreamPlayer3D = $FootstepAudio
 @onready var headbob_animation: AnimationPlayer = $HeadbobAnimation
+@onready var open_close_audio: AudioStreamPlayer3D = $openCloseAudio
 
 
 func _ready() -> void:
@@ -133,18 +134,22 @@ func _physics_process(delta: float) -> void:
 	# Use velocity to actually move
 	move_and_slide()
 
-func move_self_lock_and_look(destination : Vector3):
+func move_self_lock_and_look(destination : Vector3, sound : AudioStreamMP3):
 	var tween := create_tween()
 	tween.tween_property(self, ^"position", destination, 0.5)
 	can_move = false
 	has_gravity = false
 	zoom_in()
+	open_close_audio.stream = sound
+	open_close_audio.play()
 	$Head/handsanimated.get_node("AnimationPlayer").play("liftrock")
 
-func unlock_and_zoom_out() -> void:
+func unlock_and_zoom_out(sound : AudioStreamMP3) -> void:
 	can_move = true
 	has_gravity = true
 	zoom_out()
+	open_close_audio.stream = sound
+	open_close_audio.play()
 	$Head/handsanimated.get_node("AnimationPlayer").play("droprock")
 
 

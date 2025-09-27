@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://dc0qgqgvfmcil"]
+
+[ext_resource type="PackedScene" uid="uid://dut05r4yskhqp" path="res://Assets/Models/interest objects/cochinitanimada.glb" id="1_8btan"]
+
+[node name="cochinitanimada" instance=ExtResource("1_8btan")]
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/0/rotation = Quaternion(0.9990479, -1.9063382e-16, -1.9063384e-16, -0.04362692)
+bones/1/rotation = Quaternion(0.9958225, 0.00034455562, -0.01788396, 0.08954183)
+bones/2/rotation = Quaternion(-0.5677507, 6.2199e-07, -3.531563e-07, 0.8232006)
+bones/3/rotation = Quaternion(0.0020336565, -0.25440657, -0.14560272, 0.9560717)
+bones/4/rotation = Quaternion(-0.25292143, 0.0386223, 0.5523481, 0.7933793)
+bones/5/rotation = Quaternion(0.36900312, -0.016884461, -0.32785365, 0.86951923)
+bones/6/rotation = Quaternion(-0.006494261, 0.23014453, 0.07839682, 0.96997184)
+bones/7/rotation = Quaternion(-0.23451708, -0.03318617, -0.566537, 0.7892632)
+bones/8/rotation = Quaternion(0.37639925, 0.022480972, 0.3252145, 0.86721027)
+bones/9/position = Vector3(0.29242063, 0.9827832, -0.13731506)
+bones/9/rotation = Quaternion(0.83160007, -0.18120666, 0.2510883, -0.46104267)
+bones/10/position = Vector3(-0.2172792, 1.005059, -0.14495903)
+bones/10/rotation = Quaternion(0.8085843, 0.18167944, -0.31994307, -0.45915216)
+bones/11/rotation = Quaternion(0.6450131, 1.09742e-17, -2.6937347e-16, 0.7641716)
+bones/12/rotation = Quaternion(-0.23377106, 5.653341e-17, -1.2401793e-16, 0.9722917)
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "pillbug_walking"

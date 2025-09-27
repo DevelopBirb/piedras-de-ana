@@ -124,6 +124,11 @@ stream = ExtResource("3_5hfox")
 volume_db = 2.632
 autoplay = true
 
+[node name="openCloseAudio" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_5hfox")
+volume_db = 2.632
+autoplay = true
+
 [node name="HeadbobAnimation" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_5hfox")
