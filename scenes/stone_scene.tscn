@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://bvgp1rq7b4jvp" path="res://Assets/sounds/still life sounds/stilllife_cucarachas.mp3" id="4_ucfkm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5u2ac"]
-size = Vector3(1.715, 1.145, 1.9546485)
+size = Vector3(1.9873047, 1.145, 2.3093555)
 
 [node name="StoneScene" type="Node3D"]
 script = ExtResource("1_5u2ac")
@@ -18,7 +18,7 @@ still_life_sound = ExtResource("4_ucfkm")
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.4999558)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.6773093)
 shape = SubResource("BoxShape3D_5u2ac")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

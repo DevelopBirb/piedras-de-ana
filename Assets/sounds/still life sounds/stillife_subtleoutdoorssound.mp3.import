@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c51f4o3q8tao8"
+path="res://.godot/imported/stillife_subtleoutdoorssound.mp3-bc6f994b041378da04723d32a8261757.mp3str"
+
+[deps]
+
+source_file="res://Assets/sounds/still life sounds/stillife_subtleoutdoorssound.mp3"
+dest_files=["res://.godot/imported/stillife_subtleoutdoorssound.mp3-bc6f994b041378da04723d32a8261757.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://igfha0f6jcof"
+path="res://.godot/imported/dejarcaerroca2.mp3-ecf254a7aee38294753fa7252de635cb.mp3str"
+
+[deps]
+
+source_file="res://Assets/sounds/close stone sounds/dejarcaerroca2.mp3"
+dest_files=["res://.godot/imported/dejarcaerroca2.mp3-ecf254a7aee38294753fa7252de635cb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bm40ifd4vnxi3"
+path="res://.godot/imported/levantarroca5.mp3-8905f36ec704ab29ab36fbb07178c5f5.mp3str"
+
+[deps]
+
+source_file="res://Assets/sounds/open stone sounds/levantarroca5.mp3"
+dest_files=["res://.godot/imported/levantarroca5.mp3-8905f36ec704ab29ab36fbb07178c5f5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
