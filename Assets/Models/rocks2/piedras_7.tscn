@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjms06rxfic0b"]
+
+[ext_resource type="PackedScene" uid="uid://dxai2os38x5sm" path="res://Assets/Models/rocks2/piedras7.glb" id="1_3a8f4"]
+[ext_resource type="Material" uid="uid://bfc5d3sc2dl0m" path="res://Assets/Models/rocks2/piedrasMaterial.tres" id="2_83yit"]
+
+[node name="piedras7" instance=ExtResource("1_3a8f4")]
+
+[node name="Rock_007" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_83yit")

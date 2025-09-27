@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bvgp1rq7b4jvp"
+path="res://.godot/imported/stilllife_cucarachas.mp3-086b8c6fb2eda83df2d2ef74411a443e.mp3str"
+
+[deps]
+
+source_file="res://Assets/sounds/still life sounds/stilllife_cucarachas.mp3"
+dest_files=["res://.godot/imported/stilllife_cucarachas.mp3-086b8c6fb2eda83df2d2ef74411a443e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

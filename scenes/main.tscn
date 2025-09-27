@@ -1,27 +1,27 @@
-[gd_scene load_steps=34 format=3 uid="uid://bsa5v0ittp6hq"]
+[gd_scene load_steps=32 format=3 uid="uid://bsa5v0ittp6hq"]
 
 [ext_resource type="PackedScene" uid="uid://2bqcavfcsc4h" path="res://Assets/Models/Rock.glb" id="3_tefeu"]
 [ext_resource type="Script" uid="uid://bc6pxgkpt6xn3" path="res://Scripts/state_machine.gd" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://ch75ubcweo5ea" path="res://scenes/stone_scene.tscn" id="5_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://cfk4dvr4xfsf3" path="res://scenes/ground scenes/ground.tscn" id="5_tefeu"]
-[ext_resource type="Script" uid="uid://cjhv5gsh2m2on" path="res://Scripts/stone_scene.gd" id="6_tipki"]
-[ext_resource type="ArrayMesh" uid="uid://bpo6rbh70t7a8" path="res://Assets/Models/Rocks/rock24.res" id="7_85g3d"]
-[ext_resource type="ArrayMesh" uid="uid://br6fjg2b5hfnu" path="res://Assets/Models/Rocks/rock04.res" id="7_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://dc0qgqgvfmcil" path="res://Assets/Models/interest objects/cochinitanimadawalking.tscn" id="8_0ld40"]
 [ext_resource type="PackedScene" uid="uid://bdydcfxdjrts8" path="res://Assets/Models/found_head.glb" id="8_choun"]
 [ext_resource type="PackedScene" uid="uid://bnbpxrtigiky2" path="res://scenes/ground scenes/suelo_2.tscn" id="9_85g3d"]
 [ext_resource type="PackedScene" uid="uid://cop38ne3pvu1m" path="res://scenes/plant scenes/palmito_1.tscn" id="10_choun"]
 [ext_resource type="PackedScene" uid="uid://cxkepvewsl7nn" path="res://Assets/Models/interest objects/chicharra.glb" id="11_a8y0u"]
-[ext_resource type="ArrayMesh" uid="uid://bgohh3todf4lj" path="res://Assets/Models/Rocks/rock07.res" id="11_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://c6ywlsfovgasv" path="res://Assets/Models/interest objects/wasp_nest.glb" id="12_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://c2e7nccsjw1lw" path="res://Assets/Models/interest objects/langosta_gigante.glb" id="13_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://umf7nh0f2kce" path="res://Assets/Models/stone_wall.glb" id="14_muem4"]
-[ext_resource type="AudioStream" uid="uid://bsag5cgnf3dyy" path="res://Assets/sounds/st1-footstep-sfx-323053.mp3" id="14_yc10j"]
 [ext_resource type="PackedScene" uid="uid://dswfhai26lrmy" path="res://Assets/Models/interest objects/milipedeanimado.tscn" id="18_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://c80cnjfelek5g" path="res://Assets/Models/interest objects/escarabajito.tscn" id="20_gqmmt"]
 [ext_resource type="PackedScene" uid="uid://d1vc8l8ttjyus" path="res://Assets/Models/ground/ground_environment.glb" id="20_jscy8"]
 [ext_resource type="Material" uid="uid://dxqetiec4d48e" path="res://Assets/Models/more interest objects/more_interest_objects.tres" id="21_yc10j"]
+[ext_resource type="PackedScene" uid="uid://c4xeryyshcnil" path="res://scenes/hingeScene.tscn" id="23_pm3ni"]
+[ext_resource type="PackedScene" uid="uid://4iulseoklbh0" path="res://Assets/Models/rocks2/piedras_2.tscn" id="25_2f3dj"]
+[ext_resource type="AudioStream" uid="uid://ch0iachob0a6a" path="res://Assets/sounds/open stone sounds/levantarroca2.mp3" id="25_vxglm"]
+[ext_resource type="AudioStream" uid="uid://drsym2t8c3bx8" path="res://Assets/sounds/open stone sounds/levantarroca3.mp3" id="26_2f3dj"]
+[ext_resource type="PackedScene" uid="uid://bb6ywtmptc43w" path="res://Assets/Models/rocks2/piedras_1.tscn" id="26_2wyq8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sugp2"]
 sky_top_color = Color(0.547212, 0.772355, 0.975433, 1)
@@ -41,12 +41,12 @@ background_energy_multiplier = 0.4
 sky = SubResource("Sky_jyhfs")
 glow_enabled = true
 
-[sub_resource type="Animation" id="Animation_5u2ac"]
+[sub_resource type="Animation" id="Animation_dye6w"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/path = NodePath(".:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -56,36 +56,33 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_ktxm8"]
+[sub_resource type="Animation" id="Animation_4rjtv"]
 resource_name = "open"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/path = NodePath(".:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(-1.0471976, 0, 0)]
+"values": [Vector3(0, 0, 0), Vector3(-0.87266463, 0, 0)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ucfkm"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ji706"]
 _data = {
-&"RESET": SubResource("Animation_5u2ac"),
-&"open": SubResource("Animation_ktxm8")
+&"RESET": SubResource("Animation_dye6w"),
+&"open": SubResource("Animation_4rjtv")
 }
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_5u2ac"]
-size = Vector3(1.715, 1.145, 1.505)
-
-[sub_resource type="Animation" id="Animation_jbj1t"]
+[sub_resource type="Animation" id="Animation_vxglm"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/path = NodePath(".:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -95,29 +92,26 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_muem4"]
+[sub_resource type="Animation" id="Animation_2f3dj"]
 resource_name = "open"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/path = NodePath(".:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(-0.872665, 0, 0)]
+"values": [Vector3(0, 0, 0), Vector3(-0.87266463, 0, 0)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_dp3eg"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yq6so"]
 _data = {
-&"RESET": SubResource("Animation_jbj1t"),
-&"open": SubResource("Animation_muem4")
+&"RESET": SubResource("Animation_vxglm"),
+&"open": SubResource("Animation_2f3dj")
 }
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_0ld40"]
-size = Vector3(1.715, 1.145, 1.505)
 
 [node name="Node3D" type="Node3D"]
 
@@ -142,128 +136,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -19.419, 0)
 script = ExtResource("4_jyhfs")
 
 [node name="StoneScene" parent="." instance=ExtResource("5_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 0.999989, -0.00467747, 0, 0.00467747, 0.999989, 14.276515, 1.5830022, -14.63281)
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 14.276515, 1.5830022, -14.63281)
+
+[node name="HingeScene" parent="StoneScene" instance=ExtResource("23_pm3ni")]
+
+[node name="langosta_gigante" parent="." instance=ExtResource("13_jbj1t")]
+transform = Transform3D(-0.458347, 0, 7.75602, -7.07581, 3.18183, -0.418149, -3.17628, -7.08815, -0.187705, 18.0787, 0.686741, -2.0920558)
 
 [node name="cochinitanimada" parent="." instance=ExtResource("8_0ld40")]
 transform = Transform3D(3.05522, 0, 0.98474896, 0, 3.21, 0, -0.98474896, 0, 3.05522, 21.794046, 1.30347, -3.592572)
 
-[node name="StoneScene4" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.0787, 0.920492, -2.9022)
-script = ExtResource("6_tipki")
+[node name="chicharra2" parent="." instance=ExtResource("11_a8y0u")]
+transform = Transform3D(0.304755, -0.00619551, -1.50733, 0.13862, 1.53143, 0.021732, 1.50095, -0.140176, 0.304043, 15.414541, 1.4498967, -10.554077)
 
-[node name="Hinge" type="Node3D" parent="StoneScene4"]
+[node name="found_head" parent="." instance=ExtResource("8_choun")]
+transform = Transform3D(0.0879495, 0.961019, 0.262122, -0.988267, 0.117167, -0.0979779, -0.124871, -0.25043, 0.960048, 12.9795885, 0.39888397, -2.7372668)
 
-[node name="Rock04" type="MeshInstance3D" parent="StoneScene4/Hinge"]
-transform = Transform3D(0.228062, 0, 0.316367, 0, 0.39, 0, -0.316367, 0, 0.228062, 0, 0, 0.549939)
-mesh = ExtResource("7_jkv2x")
-skeleton = NodePath("../..")
+[node name="milipedeanimado" parent="." instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.13244611, -0.008099411, 0.21187833, 0.017876817, 0.24935462, -0.0016428758, -0.21127819, 0.01602121, 0.13268338, 18.933817, 1.1119456, -3.7044587)
 
-[node name="ObjectContainer" type="Node3D" parent="StoneScene4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.560005, 0.51851)
-
-[node name="langosta_gigante" parent="StoneScene4/ObjectContainer" instance=ExtResource("13_jbj1t")]
-transform = Transform3D(-0.458347, 0, 7.75602, -7.07581, 3.18183, -0.418149, -3.17628, -7.08815, -0.187705, 0, 0.326254, 0.291634)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="StoneScene4"]
-root_node = NodePath("../../StoneScene4")
-libraries = {
-&"": SubResource("AnimationLibrary_ucfkm")
-}
-
-[node name="Area3D" type="Area3D" parent="StoneScene4"]
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StoneScene4/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.72478)
-shape = SubResource("BoxShape3D_5u2ac")
-
-[node name="StoneScene2" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2373, 0.485014, -3.37617)
-script = ExtResource("6_tipki")
-
-[node name="Hinge" type="Node3D" parent="StoneScene2"]
-
-[node name="Rock24" type="MeshInstance3D" parent="StoneScene2/Hinge"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.177058, 0.696594)
-mesh = ExtResource("7_85g3d")
-
-[node name="ObjectContainer" type="Node3D" parent="StoneScene2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.560005, 0.51851)
-
-[node name="found_head" parent="StoneScene2/ObjectContainer" instance=ExtResource("8_choun")]
-transform = Transform3D(0.0879495, 0.961019, 0.262122, -0.988267, 0.117167, -0.0979779, -0.124871, -0.25043, 0.960048, -0.257711, 0.473875, 0.120393)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="StoneScene2"]
-libraries = {
-&"": SubResource("AnimationLibrary_dp3eg")
-}
-
-[node name="Area3D" type="Area3D" parent="StoneScene2"]
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StoneScene2/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.72478)
-shape = SubResource("BoxShape3D_0ld40")
-
-[node name="StoneScene5" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.414541, 1.5115207, -11.524819)
-script = ExtResource("6_tipki")
-
-[node name="Hinge" type="Node3D" parent="StoneScene5"]
-
-[node name="Rock24" type="MeshInstance3D" parent="StoneScene5/Hinge"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.177058, 0.696594)
-mesh = ExtResource("11_jbj1t")
-
-[node name="ObjectContainer" type="Node3D" parent="StoneScene5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.560005, 0.51851)
-
-[node name="chicharra2" parent="StoneScene5/ObjectContainer" instance=ExtResource("11_a8y0u")]
-transform = Transform3D(0.304755, -0.00619551, -1.50733, 0.13862, 1.53143, 0.021732, 1.50095, -0.140176, 0.304043, 0, 0.498381, 0.452232)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="StoneScene5"]
-libraries = {
-&"": SubResource("AnimationLibrary_dp3eg")
-}
-
-[node name="Area3D" type="Area3D" parent="StoneScene5"]
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StoneScene5/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0125122, 4.76837e-07, 1.7247)
-shape = SubResource("BoxShape3D_0ld40")
-
-[node name="StoneScene3" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.82885, 1.0402607, -4.4566927)
-script = ExtResource("6_tipki")
-open_sound = ExtResource("14_yc10j")
-
-[node name="Hinge" type="Node3D" parent="StoneScene3"]
-
-[node name="Rock24" type="MeshInstance3D" parent="StoneScene3/Hinge"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.177058, 0.696594)
-mesh = ExtResource("7_85g3d")
-
-[node name="ObjectContainer" type="Node3D" parent="StoneScene3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.560005, 0.51851)
-
-[node name="milipedeanimado" parent="StoneScene3/ObjectContainer" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.13244611, -0.008099411, 0.21187833, 0.017876817, 0.24935462, -0.0016428758, -0.21127819, 0.01602121, 0.13268338, 0.10496712, 0.63168997, 0.23372412)
-
-[node name="wasp_nest" parent="StoneScene3/ObjectContainer" instance=ExtResource("12_jkv2x")]
-transform = Transform3D(0.761237, 0, 0, 0, 0.761237, 0, 0, 0, 0.761237, -0.160691, 0.611111, 0.507949)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="StoneScene3"]
-libraries = {
-&"": SubResource("AnimationLibrary_dp3eg")
-}
-
-[node name="Area3D" type="Area3D" parent="StoneScene3"]
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StoneScene3/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.72478)
-shape = SubResource("BoxShape3D_0ld40")
+[node name="wasp_nest" parent="." instance=ExtResource("12_jkv2x")]
+transform = Transform3D(0.761237, 0, 0, 0, 0.761237, 0, 0, 0, 0.761237, 18.66816, 1.0913666, -3.430234)
 
 [node name="suelo2" parent="." instance=ExtResource("9_85g3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.54234, -3.48157, -11.7345)
@@ -276,8 +169,7 @@ transform = Transform3D(1.85884, 0, 1.02051, 0, 2.12055, 0, -1.02051, 0, 1.85884
 transform = Transform3D(-0.196818, -0.180511, 0.96368, -0.0255503, 0.983516, 0.179009, -0.980107, 0.0106098, -0.198186, -9.98797, -1.4584, -20.5589)
 
 [node name="ground_environment" parent="." instance=ExtResource("20_jscy8")]
-transform = Transform3D(0.43015, 0, 0, 0, 0.43015, 0, 0, 0, 0.43015, -2.4724061, -3.3943577, -11.740482)
-metadata/_edit_lock_ = true
+transform = Transform3D(0.42981312, 0, 0, 0, 0.42981312, 0, 0, 0, 0.42981312, -2.4724061, -3.3943577, -11.740482)
 
 [node name="escarabajito" parent="." instance=ExtResource("20_gqmmt")]
 transform = Transform3D(2.0883164, -0.20349751, 1.8841238, 0.290781, 2.8049014, -0.019347103, -1.8726399, 0.2086065, 2.0981188, 21.294897, 1.3091009, -3.2256634)
@@ -316,18 +208,57 @@ surface_material_override/0 = ExtResource("21_yc10j")
 [node name="StoneScene6" parent="." instance=ExtResource("5_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.002016, -1.6892309, 0)
 
+[node name="HingeScene" type="Node3D" parent="StoneScene6"]
+
+[node name="Rock2" parent="StoneScene6/HingeScene" instance=ExtResource("3_tefeu")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.0439922, 0.511324)
+
+[node name="AnimationPlayerHinge" type="AnimationPlayer" parent="StoneScene6/HingeScene"]
+libraries = {
+&"": SubResource("AnimationLibrary_ji706")
+}
+
 [node name="StoneScene7" parent="." instance=ExtResource("5_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5644784, -2.0312853, 0)
-open_sound = ExtResource("14_yc10j")
+open_sound = ExtResource("25_vxglm")
+
+[node name="HingeScene" parent="StoneScene7" instance=ExtResource("23_pm3ni")]
+
+[node name="piedras2" parent="StoneScene7/HingeScene" instance=ExtResource("25_2f3dj")]
+transform = Transform3D(0.55009973, 0, 0, 0, 0.55009973, 0, 0, 0, 0.55009973, 0.0070347786, 0.13712597, -0.1083827)
+
+[node name="StoneScene8" parent="." instance=ExtResource("5_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9032836, -2.1205568, 3.5630255)
+open_sound = ExtResource("26_2f3dj")
+
+[node name="HingeScene" type="Node3D" parent="StoneScene8"]
+
+[node name="Rock2" parent="StoneScene8/HingeScene" instance=ExtResource("3_tefeu")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.0439922, 0.511324)
+
+[node name="AnimationPlayerHinge" type="AnimationPlayer" parent="StoneScene8/HingeScene"]
+libraries = {
+&"": SubResource("AnimationLibrary_yq6so")
+}
+
+[node name="StoneScene9" parent="." instance=ExtResource("5_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22796035, -1.8520463, 3.5630255)
+open_sound = ExtResource("26_2f3dj")
+
+[node name="HingeScene" type="Node3D" parent="StoneScene9"]
+
+[node name="Rock2" parent="StoneScene9/HingeScene" instance=ExtResource("3_tefeu")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.0439922, 0.511324)
+visible = false
+
+[node name="AnimationPlayerHinge" type="AnimationPlayer" parent="StoneScene9/HingeScene"]
+libraries = {
+&"": SubResource("AnimationLibrary_ji706")
+}
+
+[node name="piedras1" parent="StoneScene9/HingeScene" instance=ExtResource("26_2wyq8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.34349072, 0.14803743, 0.2780707)
 
 [connection signal="state_changed" from="State Machine" to="ProtoController" method="_on_state_machine_state_changed"]
-[connection signal="body_entered" from="StoneScene4/Area3D" to="StoneScene4" method="_on_area_3d_body_entered"]
-[connection signal="body_exited" from="StoneScene4/Area3D" to="StoneScene4" method="_on_area_3d_body_exited"]
-[connection signal="body_entered" from="StoneScene2/Area3D" to="StoneScene2" method="_on_area_3d_body_entered"]
-[connection signal="body_exited" from="StoneScene2/Area3D" to="StoneScene2" method="_on_area_3d_body_exited"]
-[connection signal="body_entered" from="StoneScene5/Area3D" to="StoneScene5" method="_on_area_3d_body_entered"]
-[connection signal="body_exited" from="StoneScene5/Area3D" to="StoneScene5" method="_on_area_3d_body_exited"]
-[connection signal="body_entered" from="StoneScene3/Area3D" to="StoneScene3" method="_on_area_3d_body_entered"]
-[connection signal="body_exited" from="StoneScene3/Area3D" to="StoneScene3" method="_on_area_3d_body_exited"]
 
 [editable path="escarabajito"]

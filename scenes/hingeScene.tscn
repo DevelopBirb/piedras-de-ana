@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4xeryyshcnil"]
+
+[sub_resource type="Animation" id="Animation_vxglm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2f3dj"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.87266463, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yq6so"]
+_data = {
+&"RESET": SubResource("Animation_vxglm"),
+&"open": SubResource("Animation_2f3dj")
+}
+
+[node name="HingeScene" type="Node3D"]
+
+[node name="AnimationPlayerHinge" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_yq6so")
+}
