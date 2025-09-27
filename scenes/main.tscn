@@ -1,10 +1,11 @@
-[gd_scene load_steps=25 format=3 uid="uid://bsa5v0ittp6hq"]
+[gd_scene load_steps=27 format=3 uid="uid://bsa5v0ittp6hq"]
 
 [ext_resource type="PackedScene" uid="uid://2bqcavfcsc4h" path="res://Assets/Models/Rock.glb" id="3_tefeu"]
 [ext_resource type="Script" uid="uid://bc6pxgkpt6xn3" path="res://Scripts/state_machine.gd" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://ch75ubcweo5ea" path="res://scenes/stone_scene.tscn" id="5_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://cfk4dvr4xfsf3" path="res://scenes/ground scenes/ground.tscn" id="5_tefeu"]
+[ext_resource type="PackedScene" path="res://Assets/Models/rocks2/piedras_3.tscn" id="7_jscy8"]
 [ext_resource type="PackedScene" uid="uid://dc0qgqgvfmcil" path="res://Assets/Models/interest objects/cochinitanimadawalking.tscn" id="8_0ld40"]
 [ext_resource type="PackedScene" uid="uid://bdydcfxdjrts8" path="res://Assets/Models/found_head.glb" id="8_choun"]
 [ext_resource type="PackedScene" uid="uid://bnbpxrtigiky2" path="res://scenes/ground scenes/suelo_2.tscn" id="9_85g3d"]
@@ -19,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://d1vc8l8ttjyus" path="res://Assets/Models/ground/ground_environment.glb" id="20_jscy8"]
 [ext_resource type="Material" uid="uid://dxqetiec4d48e" path="res://Assets/Models/more interest objects/more_interest_objects.tres" id="21_yc10j"]
 [ext_resource type="PackedScene" uid="uid://c4xeryyshcnil" path="res://scenes/hingeScene.tscn" id="23_pm3ni"]
+[ext_resource type="PackedScene" uid="uid://byn7bwetmk6el" path="res://Assets/Models/rocks2/piedras_4.tscn" id="23_y6deb"]
 [ext_resource type="PackedScene" uid="uid://4iulseoklbh0" path="res://Assets/Models/rocks2/piedras_2.tscn" id="25_2f3dj"]
 [ext_resource type="PackedScene" uid="uid://bb6ywtmptc43w" path="res://Assets/Models/rocks2/piedras_1.tscn" id="26_2wyq8"]
 
@@ -65,6 +67,11 @@ script = ExtResource("4_jyhfs")
 [node name="StoneScene" parent="." instance=ExtResource("5_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 0.999989, -0.00467747, 0, 0.00467747, 0.999989, 14.276515, 1.5830022, -14.63281)
 still_life_sound = null
+
+[node name="HingeScene" parent="StoneScene" instance=ExtResource("23_pm3ni")]
+
+[node name="piedras3" parent="StoneScene/HingeScene" instance=ExtResource("7_jscy8")]
+transform = Transform3D(0.6302711, -0.12682031, 0.00059320487, 0.1268203, 0.63027155, 5.908776e-05, -0.0005932045, 5.909009e-05, 0.6429038, -0.08042908, 0.1110549, 1.4673634)
 
 [node name="cochinitanimada" parent="." instance=ExtResource("8_0ld40")]
 transform = Transform3D(3.05522, 0, 0.98474896, 0, 3.21, 0, -0.98474896, 0, 3.05522, 21.794046, 1.30347, -3.592572)
@@ -146,7 +153,15 @@ open_sound = ExtResource("14_yc10j")
 [node name="HingeScene" parent="StoneScene7" instance=ExtResource("23_pm3ni")]
 
 [node name="piedras2" parent="StoneScene7/HingeScene" instance=ExtResource("25_2f3dj")]
-transform = Transform3D(0.4616738, 0, 0, 0, 0.4616738, 0, 0, 0, 0.4616738, 0, 0, 0.52860975)
+transform = Transform3D(0.62093276, 0, 0, 0, 0.62093276, 0, 0, 0, 0.62093276, 0, 0, 0.2897663)
+
+[node name="StoneScene2" parent="." instance=ExtResource("5_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9969952, -1.0977027, 1.9520278)
+
+[node name="HingeScene" parent="StoneScene2" instance=ExtResource("23_pm3ni")]
+
+[node name="piedras4" parent="StoneScene2/HingeScene" instance=ExtResource("23_y6deb")]
+transform = Transform3D(0.50258136, 0, 0, 0, 0.50258136, 0, 0, 0, 0.50258136, 0, 0, 0.21835017)
 
 [connection signal="state_changed" from="State Machine" to="ProtoController" method="_on_state_machine_state_changed"]
 
