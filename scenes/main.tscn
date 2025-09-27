@@ -1,6 +1,5 @@
-[gd_scene load_steps=27 format=3 uid="uid://bsa5v0ittp6hq"]
+[gd_scene load_steps=29 format=3 uid="uid://bsa5v0ittp6hq"]
 
-[ext_resource type="PackedScene" uid="uid://2bqcavfcsc4h" path="res://Assets/Models/Rock.glb" id="3_tefeu"]
 [ext_resource type="Script" uid="uid://bc6pxgkpt6xn3" path="res://Scripts/state_machine.gd" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://ch75ubcweo5ea" path="res://scenes/stone_scene.tscn" id="5_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="5_tbgi4"]
@@ -21,7 +20,10 @@
 [ext_resource type="Material" uid="uid://dxqetiec4d48e" path="res://Assets/Models/more interest objects/more_interest_objects.tres" id="21_yc10j"]
 [ext_resource type="PackedScene" uid="uid://c4xeryyshcnil" path="res://scenes/hingeScene.tscn" id="23_pm3ni"]
 [ext_resource type="PackedScene" uid="uid://byn7bwetmk6el" path="res://Assets/Models/rocks2/piedras_4.tscn" id="23_y6deb"]
+[ext_resource type="PackedScene" uid="uid://3kafyyjsai82" path="res://Assets/Models/rocks2/piedras_5.tscn" id="24_2wyq8"]
 [ext_resource type="PackedScene" uid="uid://4iulseoklbh0" path="res://Assets/Models/rocks2/piedras_2.tscn" id="25_2f3dj"]
+[ext_resource type="PackedScene" uid="uid://dyr4ysk402qjm" path="res://Assets/Models/rocks2/piedras_6.tscn" id="25_vxglm"]
+[ext_resource type="PackedScene" uid="uid://bjms06rxfic0b" path="res://Assets/Models/rocks2/piedras_7.tscn" id="26_2f3dj"]
 [ext_resource type="PackedScene" uid="uid://bb6ywtmptc43w" path="res://Assets/Models/rocks2/piedras_1.tscn" id="26_2wyq8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sugp2"]
@@ -51,9 +53,6 @@ environment = SubResource("Environment_tbgi4")
 transform = Transform3D(0.35063, 0.712341, -0.60797, 0.0312968, 0.639909, 0.767813, 0.935991, -0.288246, 0.202078, 0, 0, 0)
 light_color = Color(0.93287, 0.919054, 0.868994, 1)
 shadow_enabled = true
-
-[node name="Rock2" parent="." instance=ExtResource("3_tefeu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.529341, 0, -2.47354)
 
 [node name="ProtoController" parent="." instance=ExtResource("5_tbgi4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0437016, -4.76837e-07, 1.99953)
@@ -162,6 +161,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9969952, -1.0977027, 1.9520
 
 [node name="piedras4" parent="StoneScene2/HingeScene" instance=ExtResource("23_y6deb")]
 transform = Transform3D(0.50258136, 0, 0, 0, 0.50258136, 0, 0, 0, 0.50258136, 0, 0, 0.21835017)
+
+[node name="StoneScene3" parent="." instance=ExtResource("5_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2091427, -1.5590575, 5.811025)
+
+[node name="HingeScene" parent="StoneScene3" instance=ExtResource("23_pm3ni")]
+
+[node name="piedras5" parent="StoneScene3/HingeScene" instance=ExtResource("24_2wyq8")]
+transform = Transform3D(-0.23975812, 0, -0.47591937, 0, 0.53290075, 0, 0.47591937, 0, -0.23975812, 0.07868147, 0.08195758, 0.18367624)
+
+[node name="StoneScene4" parent="." instance=ExtResource("5_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06908131, -1.7620645, 3.8109481)
+
+[node name="HingeScene" parent="StoneScene4" instance=ExtResource("23_pm3ni")]
+
+[node name="piedras6" parent="StoneScene4/HingeScene" instance=ExtResource("25_vxglm")]
+transform = Transform3D(0.50003314, 0, 0, 0, 0.50003314, 0, 0, 0, 0.50003314, -0.056491703, 0.08127248, 0.7066252)
+
+[node name="StoneScene5" parent="." instance=ExtResource("5_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.822296, -2.0304155, 3.4485495)
+
+[node name="HingeScene" parent="StoneScene5" instance=ExtResource("23_pm3ni")]
+
+[node name="piedras7" parent="StoneScene5/HingeScene" instance=ExtResource("26_2f3dj")]
+transform = Transform3D(0.5516074, 0, 0, 0, 0.5516074, 0, 0, 0, 0.5516074, -0.0335207, 0.12932944, 0.53797364)
 
 [connection signal="state_changed" from="State Machine" to="ProtoController" method="_on_state_machine_state_changed"]
 
