@@ -687,6 +687,9 @@ script = ExtResource("4_jyhfs")
 transform = Transform3D(1, 0, 0, 0, 0.999989, -0.00467747, 0, 0.00467747, 0.999989, 14.168924, 1.5830022, -14.3827305)
 still_life_sound = ExtResource("5_bu4jf")
 
+[node name="CollisionShape3D" parent="StoneScene/Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1.0000111, -5.1688403e-08, 0, 5.1688403e-08, 1.0000111, 0.052578926, -0.0014778376, 1.5944777)
+
 [node name="HingeScene" parent="StoneScene" instance=ExtResource("23_pm3ni")]
 transform = Transform3D(1, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, -0.15211678, -0.0009753704, -0.2085123)
 
@@ -1392,10 +1395,13 @@ still_life_sound = ExtResource("23_ids8r")
 transform = Transform3D(-0.23975812, 0, -0.47591937, 0, 0.53290075, 0, 0.47591937, 0, -0.23975812, 0.07868147, 0.08195758, 0.18367624)
 
 [node name="StoneScene16" parent="." instance=ExtResource("5_o6xl0")]
-transform = Transform3D(0.92, 0, 0, 0, 0.92, 0, 0, 0, 0.92, 15.94625, 1.7270243, -11.940329)
+transform = Transform3D(0.92, 0, 0, 0, 0.92, 0, 0, 0, 0.92, 16.111301, 1.7270243, -11.784462)
 open_sound = ExtResource("20_0loja")
 close_sound = ExtResource("30_dgi5k")
 still_life_sound = ExtResource("53_1v6qk")
+
+[node name="CollisionShape3D" parent="StoneScene16/Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25709152, -0.13762832, 1.4405527)
 
 [node name="HingeScene" parent="StoneScene16" instance=ExtResource("23_pm3ni")]
 transform = Transform3D(1.2004262, 0, 0, 0, 1.2004262, 0, 0, 0, 1.2004262, -0.0052337646, -3.5762787e-07, -0.039711)
@@ -1404,8 +1410,11 @@ transform = Transform3D(1.2004262, 0, 0, 0, 1.2004262, 0, 0, 0, 1.2004262, -0.00
 transform = Transform3D(0.33280343, 0, 0, 0, 0.33280343, 0, 0, 0, 0.33280343, -0.20341778, -0.009352565, 0.4964428)
 
 [node name="StoneScene18" parent="." instance=ExtResource("5_o6xl0")]
-transform = Transform3D(0.84268343, 0, -0.000117608506, 0, 0.84268343, 0, 0.000117608506, 0, 0.84268343, 14.9436035, 1.4202167, -10.143933)
+transform = Transform3D(0.84268343, 0, -0.000117608506, 0, 0.84268343, 0, 0.000117608506, 0, 0.84268343, 14.7913685, 1.4202167, -10.068447)
 still_life_sound = ExtResource("13_dnhof")
+
+[node name="CollisionShape3D" parent="StoneScene18/Area3D" index="0"]
+transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, 0, 0, 1.3668108)
 
 [node name="HingeScene" parent="StoneScene18" instance=ExtResource("23_pm3ni")]
 transform = Transform3D(1.2130913, 0, 0, 0, 1.2130913, 0, 0, 0, 1.2130913, 0.032291412, 0, -0.23054886)
@@ -1614,6 +1623,7 @@ transform = Transform3D(-0.6246579, -0.0116640115, 0.23306306, -0.012695495, 0.6
 
 [connection signal="state_changed" from="State Machine" to="ProtoController" method="_on_state_machine_state_changed"]
 
+[editable path="StoneScene"]
 [editable path="escarabajito"]
 [editable path="escarabajito/escarabajito3"]
 [editable path="escarabajito/escarabajito2"]
@@ -1621,3 +1631,7 @@ transform = Transform3D(-0.6246579, -0.0116640115, 0.23306306, -0.012695495, 0.6
 [editable path="escarabajito2"]
 [editable path="escarabajito2/escarabajito3"]
 [editable path="escarabajito2/escarabajito2"]
+[editable path="StoneScene16"]
+[editable path="StoneScene18"]
+[editable path="StoneScene12"]
+[editable path="StoneScene13"]
