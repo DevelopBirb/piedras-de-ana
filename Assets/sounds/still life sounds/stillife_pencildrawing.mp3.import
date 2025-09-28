@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b64ov178rjafi"
+path="res://.godot/imported/stillife_pencildrawing.mp3-c32bf54fca3ccf146960839eca6a9b23.mp3str"
+
+[deps]
+
+source_file="res://Assets/sounds/still life sounds/stillife_pencildrawing.mp3"
+dest_files=["res://.godot/imported/stillife_pencildrawing.mp3-c32bf54fca3ccf146960839eca6a9b23.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://vhyk6enwmkmm"
+path="res://.godot/imported/stillife_susurros.mp3-ed7ad77d9ca03353c9731bde31115a8d.mp3str"
+
+[deps]
+
+source_file="res://Assets/sounds/still life sounds/stillife_susurros.mp3"
+dest_files=["res://.godot/imported/stillife_susurros.mp3-ed7ad77d9ca03353c9731bde31115a8d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

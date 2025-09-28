@@ -1,4 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://dxqetiec4d48e"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dxqetiec4d48e"]
+
+[ext_resource type="Texture2D" uid="uid://bklkdq3nftx0s" path="res://Assets/Models/interest objects/escarabajito_Insectos.png" id="1_8725o"]
 
 [resource]
-albedo_color = Color(5.589424, 1.8967611, 0, 1)
+albedo_texture = ExtResource("1_8725o")

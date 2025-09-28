@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dclw56ybhafue"
+path="res://.godot/imported/stillife_mouthclicks.mp3-6d865c1e0196732074dd7c439f069557.mp3str"
+
+[deps]
+
+source_file="res://Assets/sounds/still life sounds/stillife_mouthclicks.mp3"
+dest_files=["res://.godot/imported/stillife_mouthclicks.mp3-6d865c1e0196732074dd7c439f069557.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
