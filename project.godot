@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 GlobalSignal="*res://global signal/global_signal.gd"
 
+[debug]
+
+gdscript/warnings/unused_signal=0
+
 [display]
 
 window/size/mode=4

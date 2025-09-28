@@ -8,7 +8,7 @@ extends Node3D
 var isOpen = false
 var inRange = false
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") && inRange:
 		if !isOpen:
 			isOpen = true
@@ -21,9 +21,9 @@ func _process(delta: float) -> void:
 				animation_player_hinge.play_backwards("open")
 			GlobalSignal.close_stone.emit(close_sound)
 
-func _on_area_3d_body_entered(body: Node3D) -> void:
+func _on_area_3d_body_entered(_body: Node3D) -> void:
 	inRange = true
 
 
-func _on_area_3d_body_exited(body: Node3D) -> void:
+func _on_area_3d_body_exited(_body: Node3D) -> void:
 	inRange = false
