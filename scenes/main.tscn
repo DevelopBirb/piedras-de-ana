@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://bsa5v0ittp6hq"]
+[gd_scene load_steps=47 format=3 uid="uid://bsa5v0ittp6hq"]
 
 [ext_resource type="Script" uid="uid://bc6pxgkpt6xn3" path="res://Scripts/state_machine.gd" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://ch75ubcweo5ea" path="res://scenes/stone_scene.tscn" id="5_o6xl0"]
@@ -10,10 +10,12 @@
 [ext_resource type="PackedScene" uid="uid://bnbpxrtigiky2" path="res://scenes/ground scenes/suelo_2.tscn" id="9_85g3d"]
 [ext_resource type="PackedScene" uid="uid://cop38ne3pvu1m" path="res://scenes/plant scenes/palmito_1.tscn" id="10_choun"]
 [ext_resource type="PackedScene" uid="uid://cxkepvewsl7nn" path="res://Assets/Models/interest objects/chicharra.glb" id="11_a8y0u"]
+[ext_resource type="PackedScene" uid="uid://bei5ild66h7o4" path="res://Assets/Models/rocks2/piedras_12.tscn" id="12_2cjbq"]
 [ext_resource type="PackedScene" uid="uid://c6ywlsfovgasv" path="res://Assets/Models/interest objects/wasp_nest.glb" id="12_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://c2e7nccsjw1lw" path="res://Assets/Models/interest objects/langosta_gigante.glb" id="13_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://umf7nh0f2kce" path="res://Assets/Models/stone_wall.glb" id="14_muem4"]
 [ext_resource type="AudioStream" uid="uid://bsag5cgnf3dyy" path="res://Assets/sounds/st1-footstep-sfx-323053.mp3" id="14_yc10j"]
+[ext_resource type="PackedScene" uid="uid://d0hfobfv5oqaa" path="res://Assets/Models/rocks2/piedras_14.tscn" id="15_chjal"]
 [ext_resource type="PackedScene" uid="uid://dswfhai26lrmy" path="res://Assets/Models/interest objects/milipedeanimado.tscn" id="18_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://c80cnjfelek5g" path="res://Assets/Models/interest objects/escarabajito.tscn" id="20_gqmmt"]
 [ext_resource type="PackedScene" uid="uid://d1vc8l8ttjyus" path="res://Assets/Models/ground/ground_environment.glb" id="20_jscy8"]
@@ -107,6 +109,15 @@ still_life_sound = null
 [node name="piedras6" parent="StoneScene28/HingeScene" instance=ExtResource("25_vxglm")]
 transform = Transform3D(0.2373873, -0.08897991, 0.6679224, 0.064703204, 0.70789796, 0.07130907, -0.67070955, 0.036797624, 0.24328023, 0.38509655, 0.31033003, 0.9186249)
 
+[node name="StoneScene30" parent="." instance=ExtResource("5_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 0.999989, -0.00467747, 0, 0.00467747, 0.999989, 11.922447, 1.1187707, -10.628392)
+still_life_sound = null
+
+[node name="HingeScene" parent="StoneScene30" instance=ExtResource("23_pm3ni")]
+
+[node name="piedras8" parent="StoneScene30/HingeScene" instance=ExtResource("29_2cjbq")]
+transform = Transform3D(-0.55908394, -0.08327658, -0.14635652, -0.09053985, 0.57655513, 0.017805021, 0.14197856, 0.039742965, -0.5649716, 0.102871895, 0.13234127, 0.71287346)
+
 [node name="StoneScene29" parent="." instance=ExtResource("5_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 0.999989, -0.00467747, 0, 0.00467747, 0.999989, -0.2911179, -0.9834968, -8.9854965)
 still_life_sound = null
@@ -115,6 +126,78 @@ still_life_sound = null
 
 [node name="piedras23" parent="StoneScene29/HingeScene" instance=ExtResource("24_c6pm6")]
 transform = Transform3D(0.6381165, -0.06732703, 0.00031492373, 0.06732702, 0.638117, 1.6566599e-05, -0.00031492353, 1.6568461e-05, 0.6416587, 0.30202562, 0.2919762, 0.6426716)
+
+[node name="StoneScene31" parent="." instance=ExtResource("5_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 0.999989, -0.00467747, 0, 0.00467747, 0.999989, -5.27952, -1.8818005, -8.925689)
+still_life_sound = null
+
+[node name="HingeScene" parent="StoneScene31" instance=ExtResource("23_pm3ni")]
+
+[node name="piedras7" parent="StoneScene31/HingeScene" instance=ExtResource("26_2f3dj")]
+transform = Transform3D(-0.7040709, -0.11400514, -0.05292638, -0.12014002, 0.69891727, 0.09271658, 0.036941964, 0.1001642, -0.70718974, 0.15813065, 0.31093776, 0.9092274)
+
+[node name="StoneScene32" parent="." instance=ExtResource("5_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 0.999989, -0.00467747, 0, 0.00467747, 0.999989, -13.864283, -2.7573564, -15.384692)
+still_life_sound = null
+
+[node name="HingeScene" parent="StoneScene32" instance=ExtResource("23_pm3ni")]
+
+[node name="piedras12" parent="StoneScene32/HingeScene" instance=ExtResource("12_2cjbq")]
+transform = Transform3D(0.35664722, -0.035847746, 0.56812394, 0.01781555, 0.67079085, 0.0311419, -0.5689751, -0.0014666632, 0.3570893, 0.27260876, 0.3592651, 1.0139437)
+
+[node name="StoneScene35" parent="." instance=ExtResource("5_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 0.999989, -0.00467747, 0, 0.00467747, 0.999989, -28.997, -2.867705, -20.260555)
+still_life_sound = null
+
+[node name="HingeScene" parent="StoneScene35" instance=ExtResource("23_pm3ni")]
+
+[node name="piedras15" parent="StoneScene35/HingeScene" instance=ExtResource("34_fuf3a")]
+transform = Transform3D(-0.5584534, -0.00028607712, -0.061159935, 0.00028607692, 0.5617682, -0.005239863, 0.06115994, -0.005239864, -0.5584292, -0.5936489, 0.2573514, 0.91384315)
+
+[node name="StoneScene36" parent="." instance=ExtResource("5_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 0.999989, -0.00467747, 0, 0.00467747, 0.999989, -40.619083, -2.9014752, -21.604986)
+still_life_sound = null
+
+[node name="HingeScene" parent="StoneScene36" instance=ExtResource("23_pm3ni")]
+
+[node name="piedras7" parent="StoneScene36/HingeScene" instance=ExtResource("26_2f3dj")]
+transform = Transform3D(0.5489776, 0.0021649185, 0.46283433, -0.0021649168, 0.71804726, -0.000790827, -0.46283415, -0.0007908237, 0.54898167, -0.37968826, 0.26516485, 0.6742058)
+
+[node name="StoneScene37" parent="." instance=ExtResource("5_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 0.999989, -0.00467747, 0, 0.00467747, 0.999989, -43.715847, -2.9014752, -26.273886)
+still_life_sound = null
+
+[node name="HingeScene" parent="StoneScene37" instance=ExtResource("23_pm3ni")]
+
+[node name="piedras13" parent="StoneScene37/HingeScene" instance=ExtResource("32_dgi5k")]
+transform = Transform3D(-0.47648728, -0.0011743447, -0.25106117, -0.016538423, 0.53755605, 0.028873758, 0.25051856, 0.033254083, -0.47561353, -0.16930771, 0.19924212, 0.6958008)
+
+[node name="StoneScene38" parent="." instance=ExtResource("5_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 0.999989, -0.00467747, 0, 0.00467747, 0.999989, -32.8067, -3.2444713, -33.65639)
+still_life_sound = null
+
+[node name="HingeScene" parent="StoneScene38" instance=ExtResource("23_pm3ni")]
+
+[node name="piedras14" parent="StoneScene38/HingeScene" instance=ExtResource("15_chjal")]
+transform = Transform3D(-0.26248097, 0.0016162678, 0.34553927, -0.0016162664, 0.43391606, -0.0032574134, -0.34553915, -0.003257414, -0.2624659, -0.056461334, 0.26257157, 0.460289)
+
+[node name="StoneScene34" parent="." instance=ExtResource("5_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 0.999989, -0.00467747, 0, 0.00467747, 0.999989, -0.8842713, -1.0013654, -14.690844)
+still_life_sound = null
+
+[node name="HingeScene" parent="StoneScene34" instance=ExtResource("23_pm3ni")]
+
+[node name="piedras21" parent="StoneScene34/HingeScene" instance=ExtResource("25_5he1u")]
+transform = Transform3D(0.79086334, -0.064992316, 0.00030400304, 0.064992316, 0.7908637, 1.2468081e-05, -0.00030400293, 1.2471806e-05, 0.7935295, 0.008480489, 0.27772856, 0.7431927)
+
+[node name="StoneScene33" parent="." instance=ExtResource("5_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 0.9987959, -0.049058963, 0, 0.049058963, 0.9987959, -6.439283, -1.6478255, -18.195251)
+still_life_sound = null
+
+[node name="HingeScene" parent="StoneScene33" instance=ExtResource("23_pm3ni")]
+
+[node name="piedras11" parent="StoneScene33/HingeScene" instance=ExtResource("26_vxglm")]
+transform = Transform3D(0.800212, -0.037677612, 0.0018506537, 0.037677623, 0.80021393, 4.3522567e-05, -0.0018506537, 4.355982e-05, 0.8010983, -0.17955256, 0.36975265, 0.9488678)
 
 [node name="cochinitanimada" parent="." instance=ExtResource("8_0ld40")]
 transform = Transform3D(3.05522, 0, 0.98474896, 0, 3.21, 0, -0.98474896, 0, 3.05522, 21.794046, 1.30347, -3.592572)
@@ -180,21 +263,21 @@ bones/26/rotation = Quaternion(-0.15101461, 0.22307336, 0.22307333, 0.9368411)
 surface_material_override/0 = ExtResource("21_yc10j")
 
 [node name="StoneScene6" parent="." instance=ExtResource("5_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.002016, -1.6892309, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.60883, -4.1129894, 10.684857)
 
 [node name="HingeScene" parent="StoneScene6" instance=ExtResource("23_pm3ni")]
 
 [node name="piedras1" parent="StoneScene6/HingeScene" instance=ExtResource("26_2wyq8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5356355)
+transform = Transform3D(0.8054222, 0, 0, 0, 0.8054222, 0, 0, 0, 0.8054222, 0, 0, 0.53563595)
 
 [node name="StoneScene7" parent="." instance=ExtResource("5_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5644784, -2.0312853, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.421227, -3.548575, 14.3366165)
 open_sound = ExtResource("14_yc10j")
 
 [node name="HingeScene" parent="StoneScene7" instance=ExtResource("23_pm3ni")]
 
 [node name="piedras2" parent="StoneScene7/HingeScene" instance=ExtResource("25_2f3dj")]
-transform = Transform3D(0.62093276, 0, 0, 0, 0.62093276, 0, 0, 0, 0.62093276, 0, 0, 0.2897663)
+transform = Transform3D(0.4674632, -0.067828916, 0, 0.067828916, 0.4674632, 0, 0, 0, 0.47235855, 0.3582878, 0.11862111, 0.0048179626)
 
 [node name="StoneScene2" parent="." instance=ExtResource("5_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9969952, -1.0977027, 1.8457913)
