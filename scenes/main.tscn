@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ch75ubcweo5ea" path="res://scenes/stone_scene.tscn" id="5_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://cfk4dvr4xfsf3" path="res://scenes/ground scenes/ground.tscn" id="5_tefeu"]
-[ext_resource type="PackedScene" path="res://Assets/Models/rocks2/piedras_3.tscn" id="7_jscy8"]
+[ext_resource type="PackedScene" uid="uid://dlsb6j0xhm26j" path="res://Assets/Models/rocks2/piedras_3.tscn" id="7_jscy8"]
 [ext_resource type="PackedScene" uid="uid://cl6tmo64a7yy6" path="res://Assets/Models/rocks2/piedras_22.tscn" id="7_pibwh"]
 [ext_resource type="PackedScene" uid="uid://dc0qgqgvfmcil" path="res://Assets/Models/interest objects/cochinitanimadawalking.tscn" id="8_0ld40"]
 [ext_resource type="PackedScene" uid="uid://bnbpxrtigiky2" path="res://scenes/ground scenes/suelo_2.tscn" id="9_85g3d"]
