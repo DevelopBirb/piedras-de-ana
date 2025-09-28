@@ -1556,7 +1556,7 @@ still_life_sound = ExtResource("28_tel4y")
 transform = Transform3D(0.6427688, 0, 0, 0, 0.6427688, 0, 0, 0, 0.6427688, -0.0022449493, 0.23244703, 0.546293)
 
 [node name="StoneScene12" parent="." instance=ExtResource("5_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.52145, 1.006352, -3.973607)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.849361, 1.006352, -3.973607)
 open_sound = ExtResource("8_o7ddy")
 still_life_sound = ExtResource("56_augu2")
 
@@ -1577,7 +1577,7 @@ still_life_sound = ExtResource("23_ids8r")
 transform = Transform3D(0.45064652, -0.079746276, -0.26305285, 0.029778793, 0.726156, -0.11641355, 0.16576296, 0.086348146, 0.73605406, -0.3780384, 0.34369326, 0.9601066)
 
 [node name="StoneScene13" parent="." instance=ExtResource("5_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.081444, 1.006352, -4.650106)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.032291, 1.006352, -4.807776)
 open_sound = ExtResource("8_o7ddy")
 still_life_sound = ExtResource("57_tm6hj")
 
