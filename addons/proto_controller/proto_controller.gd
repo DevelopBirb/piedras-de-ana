@@ -67,6 +67,7 @@ var freeflying : bool = false
 
 func _ready() -> void:
 	check_input_mappings()
+	capture_mouse()
 	look_rotation.y = rotation.y
 	look_rotation.x = head.rotation.x
 	GlobalSignal.open_stone.connect(move_self_lock_and_look)
