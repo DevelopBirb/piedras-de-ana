@@ -241,6 +241,7 @@ transform = Transform3D(-0.196818, -0.180511, 0.96368, -0.0255503, 0.983516, 0.1
 
 [node name="ground_environment" parent="." instance=ExtResource("20_jscy8")]
 transform = Transform3D(0.43015, 0, 0, 0, 0.43015, 0, 0, 0, 0.43015, -2.4724061, -3.3943577, -11.740482)
+metadata/_edit_lock_ = true
 
 [node name="escarabajito" parent="." instance=ExtResource("20_gqmmt")]
 transform = Transform3D(2.0883164, -0.20349751, 1.8841238, 0.290781, 2.8049014, -0.019347103, -1.8726399, 0.2086065, 2.0981188, 21.294897, 1.3091009, -3.2256634)
