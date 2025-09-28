@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cjc8563yh8vin"]
+
+[ext_resource type="Texture2D" uid="uid://dn08gn1yd62b3" path="res://Assets/Models/interest objects/charco_esqueleto_360_F_1519547354_Xz39m9Fpz9t6uwazrFFUVS2kCUPZCHSV.png" id="1_ecdvi"]
+
+[resource]
+transparency = 1
+albedo_texture = ExtResource("1_ecdvi")
+metallic = 0.42
+metallic_specular = 1.0
+roughness = 0.0
+clearcoat_enabled = true
+clearcoat_roughness = 0.27

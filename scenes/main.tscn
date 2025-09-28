@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://bsa5v0ittp6hq"]
+[gd_scene load_steps=48 format=3 uid="uid://bsa5v0ittp6hq"]
 
 [ext_resource type="Script" uid="uid://bc6pxgkpt6xn3" path="res://Scripts/state_machine.gd" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://ch75ubcweo5ea" path="res://scenes/stone_scene.tscn" id="5_o6xl0"]
@@ -43,6 +43,7 @@
 [ext_resource type="PackedScene" uid="uid://dak6yq05c0n7h" path="res://Assets/Models/rocks2/piedras_16.tscn" id="32_kmb1v"]
 [ext_resource type="PackedScene" uid="uid://c886g4onur2qy" path="res://Assets/Models/rocks2/piedras_18.tscn" id="34_c6pm6"]
 [ext_resource type="PackedScene" uid="uid://c1dn2xx7ihnrl" path="res://Assets/Models/rocks2/piedras_15.tscn" id="34_fuf3a"]
+[ext_resource type="PackedScene" uid="uid://bpfx4v4ay23t1" path="res://Assets/Models/interest objects/charco_esqueleto.tscn" id="44_cjqg0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sugp2"]
 sky_top_color = Color(0.547212, 0.772355, 0.975433, 1)
@@ -70,6 +71,11 @@ environment = SubResource("Environment_tbgi4")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.35063, 0.712341, -0.60797, 0.0312968, 0.639909, 0.767813, 0.935991, -0.288246, 0.202078, 0, 0, 0)
 light_color = Color(0.93287, 0.919054, 0.868994, 1)
+shadow_enabled = true
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.86410755, -0.5000434, 0.057227865, -0.14137235, 0.35026816, 0.92591906, -0.4830448, 0.7920032, -0.37336165, 0.031885147, -0.051357985, 0)
+light_color = Color(0.35138944, 0.46382344, 0.5292352, 1)
 shadow_enabled = true
 
 [node name="ProtoController" parent="." instance=ExtResource("5_tbgi4")]
@@ -144,6 +150,15 @@ still_life_sound = null
 
 [node name="piedras12" parent="StoneScene32/HingeScene" instance=ExtResource("12_2cjbq")]
 transform = Transform3D(0.35664722, -0.035847746, 0.56812394, 0.01781555, 0.67079085, 0.0311419, -0.5689751, -0.0014666632, 0.3570893, 0.27260876, 0.3592651, 1.0139437)
+
+[node name="StoneScene39" parent="." instance=ExtResource("5_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 0.999989, -0.00467747, 0, 0.00467747, 0.999989, -23.139206, -3.0296988, -11.298981)
+still_life_sound = null
+
+[node name="HingeScene" parent="StoneScene39" instance=ExtResource("23_pm3ni")]
+
+[node name="piedras17" parent="StoneScene39/HingeScene" instance=ExtResource("32_j8jky")]
+transform = Transform3D(0.70551014, 0.0007926265, 0.16945449, -0.0007926261, 0.72557634, -9.385613e-05, -0.1694544, -9.3854265e-05, 0.7055115, -0.09558678, 0.25272894, 0.6058655)
 
 [node name="StoneScene35" parent="." instance=ExtResource("5_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 0.999989, -0.00467747, 0, 0.00467747, 0.999989, -28.997, -2.867705, -20.260555)
@@ -226,7 +241,6 @@ transform = Transform3D(-0.196818, -0.180511, 0.96368, -0.0255503, 0.983516, 0.1
 
 [node name="ground_environment" parent="." instance=ExtResource("20_jscy8")]
 transform = Transform3D(0.43015, 0, 0, 0, 0.43015, 0, 0, 0, 0.43015, -2.4724061, -3.3943577, -11.740482)
-metadata/_edit_lock_ = true
 
 [node name="escarabajito" parent="." instance=ExtResource("20_gqmmt")]
 transform = Transform3D(2.0883164, -0.20349751, 1.8841238, 0.290781, 2.8049014, -0.019347103, -1.8726399, 0.2086065, 2.0981188, 21.294897, 1.3091009, -3.2256634)
@@ -314,7 +328,7 @@ transform = Transform3D(1.2130913, 0, 0, 0, 1.2130913, 0, 0, 0, 1.2130913, 0.032
 transform = Transform3D(0.4997196, -0.047167018, 0, 0.047167018, 0.4997196, 0, 0, 0, 0.50194067, -0.164217, 0.12877202, 0.41913605)
 
 [node name="StoneScene19" parent="." instance=ExtResource("5_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.236588, 1.4202167, -7.1871476)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.236588, 1.3852358, -7.1871476)
 
 [node name="HingeScene" parent="StoneScene19" instance=ExtResource("23_pm3ni")]
 
@@ -491,6 +505,9 @@ still_life_sound = ExtResource("28_tel4y")
 
 [node name="piedras13" parent="StoneScene9/HingeScene" instance=ExtResource("32_dgi5k")]
 transform = Transform3D(0.4253591, 0, 0, 0, 0.4253591, 0, 0, 0, 0.4253591, 0.09912658, 0.08349252, 0.54061794)
+
+[node name="charco_esqueleto" parent="." instance=ExtResource("44_cjqg0")]
+transform = Transform3D(-0.6246579, -0.0116640115, 0.23306306, -0.012695495, 0.66670114, -0.0006604213, -0.23300917, -0.005055888, -0.6247666, -23.09988, -3.0091236, -10.694631)
 
 [connection signal="state_changed" from="State Machine" to="ProtoController" method="_on_state_machine_state_changed"]
 

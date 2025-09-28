@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpfx4v4ay23t1"]
+
+[ext_resource type="PackedScene" uid="uid://ol6f1pdnpcq5" path="res://Assets/Models/interest objects/charco_esqueleto.glb" id="1_rbb7v"]
+[ext_resource type="Material" uid="uid://cjc8563yh8vin" path="res://Assets/Models/interest objects/charco_esqueleto.tres" id="2_4lumh"]
+
+[node name="charco_esqueleto" instance=ExtResource("1_rbb7v")]
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/0/position = Vector3(0, -0.48353195, 0)
+bones/1/position = Vector3(1.9993808, -0.48353195, 2.294879)
+bones/2/position = Vector3(-3.119703, -0.48353195, -0.25305802)
+bones/4/position = Vector3(-5.838787, -0.6510782, 0.44042945)
+bones/5/position = Vector3(-1.6262293, -0.7470082, -1.7936711)
+bones/6/position = Vector3(3.9034476, -0.7470082, -4.3723345)
+bones/7/position = Vector3(-0.42025948, -0.8535119, -4.66688)
+bones/9/position = Vector3(7.651411, -0.6510782, -0.6636083)
+bones/9/rotation = Quaternion(0, 0.0022662997, 0, 0.99999744)
+bones/10/position = Vector3(3.6922638, -0.6510782, 0.15144163)
+bones/11/position = Vector3(6.0826716, -0.48353195, 2.6387136)
+bones/11/rotation = Quaternion(0, 0.0022662997, 0, 0.99999744)
+bones/12/position = Vector3(-1.587327, -0.7470082, 2.1688013)
+bones/13/position = Vector3(-4.2856283, -0.57946193, -2.0931995)
+bones/13/rotation = Quaternion(0, 0.0022662997, 0, 0.99999744)
+bones/14/position = Vector3(1.1779339, -0.6859657, -3.1957529)
+bones/15/position = Vector3(0.6818342, -0.6510782, 4.0621953)
+
+[node name="charco_001" parent="Armature/Skeleton3D" index="0"]
+surface_material_override/0 = ExtResource("2_4lumh")
+
+[node name="AnimationPlayer" parent="." index="2"]
+autoplay = "ArmatureAction"
