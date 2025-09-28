@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ch75ubcweo5ea" path="res://scenes/stone_scene.tscn" id="5_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://cfk4dvr4xfsf3" path="res://scenes/ground scenes/ground.tscn" id="5_tefeu"]
-[ext_resource type="PackedScene" path="res://Assets/Models/rocks2/piedras_3.tscn" id="7_jscy8"]
+[ext_resource type="PackedScene" uid="uid://dlsb6j0xhm26j" path="res://Assets/Models/rocks2/piedras_3.tscn" id="7_jscy8"]
 [ext_resource type="PackedScene" uid="uid://cl6tmo64a7yy6" path="res://Assets/Models/rocks2/piedras_22.tscn" id="7_pibwh"]
 [ext_resource type="PackedScene" uid="uid://dc0qgqgvfmcil" path="res://Assets/Models/interest objects/cochinitanimadawalking.tscn" id="8_0ld40"]
 [ext_resource type="AudioStream" uid="uid://ch0iachob0a6a" path="res://Assets/sounds/open stone sounds/levantarroca2.mp3" id="8_o7ddy"]
@@ -51,7 +51,7 @@
 [ext_resource type="PackedScene" uid="uid://c8d275g6sukkk" path="res://Assets/Models/rocks2/piedras_17.tscn" id="32_j8jky"]
 [ext_resource type="PackedScene" uid="uid://dak6yq05c0n7h" path="res://Assets/Models/rocks2/piedras_16.tscn" id="32_kmb1v"]
 [ext_resource type="Texture2D" uid="uid://wpdy2w3h25gp" path="res://Assets/Models/interest objects/cochinitanimada_Insectos 2.png" id="33_txyw0"]
-[ext_resource type="PackedScene" uid="uid://cbi1tvd5t6ni5" path="res://Assets/Models/interest objects/milipedeanimado_2.tscn" id="33_vc5cj"]
+[ext_resource type="PackedScene" path="res://Assets/Models/interest objects/milipedeanimado_2.tscn" id="33_vc5cj"]
 [ext_resource type="PackedScene" uid="uid://c886g4onur2qy" path="res://Assets/Models/rocks2/piedras_18.tscn" id="34_c6pm6"]
 [ext_resource type="PackedScene" uid="uid://c1dn2xx7ihnrl" path="res://Assets/Models/rocks2/piedras_15.tscn" id="34_fuf3a"]
 [ext_resource type="PackedScene" uid="uid://bpfx4v4ay23t1" path="res://Assets/Models/interest objects/charco_esqueleto.tscn" id="44_cjqg0"]
@@ -1033,49 +1033,49 @@ bones/0/parent = -1
 bones/0/rest = Transform3D(1, 0, 0, 0, 1, -8.383891e-08, 0, 8.383891e-08, 1, 0, 0, 0)
 bones/0/enabled = true
 bones/0/position = Vector3(0, 0, 0)
-bones/0/rotation = Quaternion(4.1587864e-08, -4.4097344e-09, -0.09248647, 0.99571395)
+bones/0/rotation = Quaternion(4.1919456e-08, 0, 0, 1)
 bones/0/scale = Vector3(1, 1, 1)
 bones/1/name = "Bone.001"
 bones/1/parent = 0
 bones/1/rest = Transform3D(1, -1.1102229e-15, -2.3841856e-07, -6.7705006e-09, 0.99959666, -0.028397543, 2.3832241e-07, 0.028397541, 0.9995967, 0, 0.47419643, 0)
 bones/1/enabled = true
 bones/1/position = Vector3(0, 0.47419643, 0)
-bones/1/rotation = Quaternion(0.013972076, 0.0025351404, 0.17851783, 0.98383427)
+bones/1/rotation = Quaternion(0.014200204, -1.1919727e-07, -1.6927957e-09, 0.99989915)
 bones/1/scale = Vector3(1, 0.99999994, 1)
 bones/2/name = "Bone.002"
 bones/2/parent = 1
 bones/2/rest = Transform3D(1, -6.7705206e-09, -9.619539e-11, 6.770522e-09, 0.99959666, 0.028397627, -9.6110134e-11, -0.028397627, 0.99959666, -6.661338e-16, 0.5114849, -4.656613e-09)
 bones/2/enabled = true
 bones/2/position = Vector3(-6.661338e-16, 0.5114849, -4.656613e-09)
-bones/2/rotation = Quaternion(-0.014175811, 0.0008324555, 0.058616802, 0.99817955)
+bones/2/rotation = Quaternion(-0.014200247, -2.1318432e-14, 3.3856022e-09, 0.99989915)
 bones/2/scale = Vector3(1, 0.99999994, 0.99999994)
 bones/3/name = "Bone.003"
 bones/3/parent = 2
 bones/3/rest = Transform3D(1, 3.0750006e-16, -1.9829891e-25, -3.0750006e-16, 1, -1.2897488e-09, -1.9829891e-25, 1.2897488e-09, 1, 2.1095483e-16, 0.53451854, 8.8480867e-10)
 bones/3/enabled = true
 bones/3/position = Vector3(2.1095483e-16, 0.53451854, 8.8480867e-10)
-bones/3/rotation = Quaternion(-4.090971e-08, 4.224707e-09, -0.17094031, 0.9852814)
+bones/3/rotation = Quaternion(6.448744e-10, 0, -1.5375003e-16, 1)
 bones/3/scale = Vector3(1, 1, 1)
 bones/4/name = "Bone.004"
 bones/4/parent = 3
 bones/4/rest = Transform3D(1, -1.4874576e-16, -4.640012e-26, 1.4874576e-16, 1, 6.2388494e-10, -4.640012e-26, -6.2388494e-10, 1, -1.4073749e-16, 0.5577586, -5.902958e-10)
 bones/4/enabled = true
 bones/4/position = Vector3(-1.4073749e-16, 0.5577586, -5.902958e-10)
-bones/4/rotation = Quaternion(-5.9782025e-08, 5.8717187e-09, -0.24219698, 0.9702271)
+bones/4/rotation = Quaternion(-3.1194247e-10, 0, 7.437288e-17, 1)
 bones/4/scale = Vector3(1, 1, 1)
 bones/5/name = "Bone.005"
 bones/5/parent = 4
 bones/5/rest = Transform3D(1, 5.4783547e-17, 1.4210855e-14, -5.4783547e-17, 1, -2.2977886e-10, -1.4210855e-14, 2.2977886e-10, 1, 8.36589e-17, 0.5287086, 3.5089087e-10)
 bones/5/enabled = true
 bones/5/position = Vector3(8.36589e-17, 0.5287086, 3.5089087e-10)
-bones/5/rotation = Quaternion(1.01432e-07, -1.344164e-08, 0.43170136, 0.9020166)
+bones/5/rotation = Quaternion(1.1488943e-10, 7.1054274e-15, -2.7391775e-17, 1)
 bones/5/scale = Vector3(1, 1, 1)
 bones/6/name = "Bone.006"
 bones/6/parent = 5
 bones/6/rest = Transform3D(1, 5.1077955e-09, -5.4741406e-11, -5.107796e-09, 0.99977046, -0.021423647, -5.469877e-11, 0.021423647, 0.99977046, 3.246169e-17, 0.46770382, 1.361542e-10)
 bones/6/enabled = true
 bones/6/position = Vector3(3.246169e-17, 0.46770382, 1.361542e-10)
-bones/6/rotation = Quaternion(0.010369486, -0.0026886046, -0.2509662, 0.9679366)
+bones/6/rotation = Quaternion(0.01071244, -1.0660488e-14, -2.5540448e-09, 0.9999426)
 bones/6/scale = Vector3(1, 0.99999994, 0.99999994)
 
 [node name="Cylinder" type="MeshInstance3D" parent="milipedeanimado2/Armature/Skeleton3D"]
@@ -1099,7 +1099,6 @@ transform = Transform3D(-0.196818, -0.180511, 0.96368, -0.0255503, 0.983516, 0.1
 
 [node name="ground_environment" parent="." instance=ExtResource("20_jscy8")]
 transform = Transform3D(0.43015, 0, 0, 0, 0.43015, 0, 0, 0, 0.43015, -2.472, -3.394, -11.74)
-metadata/_edit_lock_ = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ground_environment"]
 
@@ -1218,6 +1217,34 @@ transform = Transform3D(-0.020673905, -0.011704058, -0.111172006, -0.012146744, 
 
 [node name="escarabajito4" parent="." instance=ExtResource("20_gqmmt")]
 transform = Transform3D(0.30094725, 0.003794238, -0.39513853, -0.08765173, 0.48495224, -0.062101275, 0.38531274, 0.10735465, 0.29449472, -51.85979, -6.480918, -2.7652898)
+
+[node name="Skeleton3D" parent="escarabajito4/Armature" index="0"]
+bones/1/rotation = Quaternion(-0.60896206, -0.45524764, -0.041599568, 0.6482162)
+bones/2/rotation = Quaternion(0.3299141, 0.3714921, -0.3990529, 0.7706537)
+bones/3/rotation = Quaternion(0.4716691, 0.4564403, 0.08805175, 0.74929124)
+bones/4/rotation = Quaternion(-0.5224135, -0.3736607, -0.061393723, 0.7639978)
+bones/5/rotation = Quaternion(-0.692294, -0.31680253, -0.3637045, 0.5367348)
+bones/6/rotation = Quaternion(-0.4607356, -0.17372896, -0.27796957, 0.8247872)
+bones/7/rotation = Quaternion(-0.11825485, -0.042966682, 0.058756437, 0.99031174)
+bones/8/rotation = Quaternion(0.1553574, -0.049842473, 0.07839008, 0.983481)
+bones/9/rotation = Quaternion(0.8195131, 0.25651437, 0.25847292, -0.44248214)
+bones/10/rotation = Quaternion(-0.45928067, -0.09086483, -0.13851948, 0.87270683)
+bones/11/rotation = Quaternion(-0.11404814, 0.032205716, -0.12823424, 0.9846379)
+bones/12/rotation = Quaternion(0.26911217, 0.03060214, 0.04907124, 0.961371)
+bones/13/rotation = Quaternion(-0.15101461, -0.22307336, -0.22307333, 0.9368411)
+bones/14/rotation = Quaternion(-0.60896206, 0.45524764, 0.041599568, 0.6482162)
+bones/15/rotation = Quaternion(0.3299141, -0.3714921, 0.3990529, 0.7706537)
+bones/16/rotation = Quaternion(0.4716691, -0.4564403, -0.08805175, 0.74929124)
+bones/17/rotation = Quaternion(-0.5224135, 0.3736607, 0.061393723, 0.7639978)
+bones/18/rotation = Quaternion(-0.692294, 0.31680253, 0.3637045, 0.5367348)
+bones/19/rotation = Quaternion(-0.4607356, 0.17372896, 0.27796957, 0.8247872)
+bones/20/rotation = Quaternion(-0.11825485, 0.042966682, -0.058756437, 0.99031174)
+bones/21/rotation = Quaternion(0.1553574, 0.049842473, -0.07839008, 0.983481)
+bones/22/rotation = Quaternion(0.8195131, -0.25651437, -0.25847292, -0.44248214)
+bones/23/rotation = Quaternion(-0.45928067, 0.09086483, 0.13851948, 0.87270683)
+bones/24/rotation = Quaternion(-0.11404814, -0.032205716, 0.12823424, 0.9846379)
+bones/25/rotation = Quaternion(0.26911217, -0.03060214, -0.04907124, 0.961371)
+bones/26/rotation = Quaternion(-0.15101461, 0.22307336, 0.22307333, 0.9368411)
 
 [node name="Icosphere" parent="escarabajito4/Armature/Skeleton3D" index="0"]
 surface_material_override/0 = SubResource("StandardMaterial3D_vchkt")
@@ -1419,7 +1446,7 @@ transform = Transform3D(0.6464067, -0.047094844, 0, 0.047094844, 0.6464067, 0, 0
 [node name="StoneScene24" parent="." instance=ExtResource("5_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.33431, 1.8379894, -21.832592)
 open_sound = ExtResource("11_ids8r")
-still_life_sound = ExtResource("49_dnhof")
+still_life_sound = ExtResource("13_dnhof")
 
 [node name="HingeScene" parent="StoneScene24" instance=ExtResource("23_pm3ni")]
 
@@ -1575,7 +1602,7 @@ skeleton = NodePath("../..")
 [node name="StoneScene9" parent="." instance=ExtResource("5_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.931467, -2.709938, 9.807912)
 open_sound = ExtResource("26_yq6so")
-still_life_sound = ExtResource("57_tm6hj")
+still_life_sound = ExtResource("28_tel4y")
 
 [node name="HingeScene" parent="StoneScene9" instance=ExtResource("23_pm3ni")]
 
