@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://emsy0e700thx"
 path.s3tc="res://.godot/imported/milipedeanimado_Insectos 2.png-479f3a03fd136e7230634c02cf5d604c.s3tc.ctex"
+path.etc2="res://.godot/imported/milipedeanimado_Insectos 2.png-479f3a03fd136e7230634c02cf5d604c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/Models/interest objects/milipedeanimado_Insectos 2.png"
-dest_files=["res://.godot/imported/milipedeanimado_Insectos 2.png-479f3a03fd136e7230634c02cf5d604c.s3tc.ctex"]
+dest_files=["res://.godot/imported/milipedeanimado_Insectos 2.png-479f3a03fd136e7230634c02cf5d604c.s3tc.ctex", "res://.godot/imported/milipedeanimado_Insectos 2.png-479f3a03fd136e7230634c02cf5d604c.etc2.ctex"]
 
 [params]
 

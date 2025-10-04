@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://buc1vvfeb2me7"
 path.s3tc="res://.godot/imported/stone_wall_1f8a4aa8602786981b1d1bdbf2da9413.jpg-20dd62bda7cdee33f39f017ecf733bd7.s3tc.ctex"
+path.etc2="res://.godot/imported/stone_wall_1f8a4aa8602786981b1d1bdbf2da9413.jpg-20dd62bda7cdee33f39f017ecf733bd7.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/Models/stone_wall_1f8a4aa8602786981b1d1bdbf2da9413.jpg"
-dest_files=["res://.godot/imported/stone_wall_1f8a4aa8602786981b1d1bdbf2da9413.jpg-20dd62bda7cdee33f39f017ecf733bd7.s3tc.ctex"]
+dest_files=["res://.godot/imported/stone_wall_1f8a4aa8602786981b1d1bdbf2da9413.jpg-20dd62bda7cdee33f39f017ecf733bd7.s3tc.ctex", "res://.godot/imported/stone_wall_1f8a4aa8602786981b1d1bdbf2da9413.jpg-20dd62bda7cdee33f39f017ecf733bd7.etc2.ctex"]
 
 [params]
 

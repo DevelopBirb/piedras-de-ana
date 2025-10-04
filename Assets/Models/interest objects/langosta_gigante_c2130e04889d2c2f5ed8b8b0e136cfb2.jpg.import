@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://y5u0apu3vhoq"
 path.s3tc="res://.godot/imported/langosta_gigante_c2130e04889d2c2f5ed8b8b0e136cfb2.jpg-51f10299885e63a6cdad251c3747ed44.s3tc.ctex"
+path.etc2="res://.godot/imported/langosta_gigante_c2130e04889d2c2f5ed8b8b0e136cfb2.jpg-51f10299885e63a6cdad251c3747ed44.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/Models/interest objects/langosta_gigante_c2130e04889d2c2f5ed8b8b0e136cfb2.jpg"
-dest_files=["res://.godot/imported/langosta_gigante_c2130e04889d2c2f5ed8b8b0e136cfb2.jpg-51f10299885e63a6cdad251c3747ed44.s3tc.ctex"]
+dest_files=["res://.godot/imported/langosta_gigante_c2130e04889d2c2f5ed8b8b0e136cfb2.jpg-51f10299885e63a6cdad251c3747ed44.s3tc.ctex", "res://.godot/imported/langosta_gigante_c2130e04889d2c2f5ed8b8b0e136cfb2.jpg-51f10299885e63a6cdad251c3747ed44.etc2.ctex"]
 
 [params]
 

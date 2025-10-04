@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://wpdy2w3h25gp"
 path.s3tc="res://.godot/imported/cochinitanimada_Insectos 2.png-583acb3dcc94c23c05d84e582615c0e6.s3tc.ctex"
+path.etc2="res://.godot/imported/cochinitanimada_Insectos 2.png-583acb3dcc94c23c05d84e582615c0e6.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/Models/interest objects/cochinitanimada_Insectos 2.png"
-dest_files=["res://.godot/imported/cochinitanimada_Insectos 2.png-583acb3dcc94c23c05d84e582615c0e6.s3tc.ctex"]
+dest_files=["res://.godot/imported/cochinitanimada_Insectos 2.png-583acb3dcc94c23c05d84e582615c0e6.s3tc.ctex", "res://.godot/imported/cochinitanimada_Insectos 2.png-583acb3dcc94c23c05d84e582615c0e6.etc2.ctex"]
 
 [params]
 

@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://me6v4laaplwu"
 path.s3tc="res://.godot/imported/wasp_nest_070bea8495e56c7030b4fd4946dc9907.jpg-a973b24c2ccd62d7a59c42186f8eed6c.s3tc.ctex"
+path.etc2="res://.godot/imported/wasp_nest_070bea8495e56c7030b4fd4946dc9907.jpg-a973b24c2ccd62d7a59c42186f8eed6c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/Models/interest objects/wasp_nest_070bea8495e56c7030b4fd4946dc9907.jpg"
-dest_files=["res://.godot/imported/wasp_nest_070bea8495e56c7030b4fd4946dc9907.jpg-a973b24c2ccd62d7a59c42186f8eed6c.s3tc.ctex"]
+dest_files=["res://.godot/imported/wasp_nest_070bea8495e56c7030b4fd4946dc9907.jpg-a973b24c2ccd62d7a59c42186f8eed6c.s3tc.ctex", "res://.godot/imported/wasp_nest_070bea8495e56c7030b4fd4946dc9907.jpg-a973b24c2ccd62d7a59c42186f8eed6c.etc2.ctex"]
 
 [params]
 

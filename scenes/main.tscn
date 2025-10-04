@@ -1,16 +1,14 @@
-[gd_scene load_steps=79 format=4 uid="uid://bsa5v0ittp6hq"]
+[gd_scene load_steps=78 format=4 uid="uid://bsa5v0ittp6hq"]
 
 [ext_resource type="Script" uid="uid://bc6pxgkpt6xn3" path="res://Scripts/state_machine.gd" id="4_jyhfs"]
 [ext_resource type="AudioStream" uid="uid://bqxodmgoimrm1" path="res://Assets/sounds/still life sounds/stillife_sinth.mp3" id="5_bu4jf"]
 [ext_resource type="PackedScene" uid="uid://ch75ubcweo5ea" path="res://scenes/stone_scene.tscn" id="5_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="5_tbgi4"]
-[ext_resource type="PackedScene" uid="uid://cfk4dvr4xfsf3" path="res://scenes/ground scenes/ground.tscn" id="5_tefeu"]
 [ext_resource type="PackedScene" path="res://Assets/Models/rocks2/piedras_3.tscn" id="7_jscy8"]
 [ext_resource type="PackedScene" uid="uid://cl6tmo64a7yy6" path="res://Assets/Models/rocks2/piedras_22.tscn" id="7_pibwh"]
 [ext_resource type="PackedScene" uid="uid://dc0qgqgvfmcil" path="res://Assets/Models/interest objects/cochinitanimadawalking.tscn" id="8_0ld40"]
 [ext_resource type="AudioStream" uid="uid://ch0iachob0a6a" path="res://Assets/sounds/open stone sounds/levantarroca2.mp3" id="8_o7ddy"]
 [ext_resource type="AudioStream" uid="uid://diju6tsn8op1x" path="res://Assets/sounds/still life sounds/stillife_menacingecho.mp3" id="9_0loja"]
-[ext_resource type="PackedScene" uid="uid://cop38ne3pvu1m" path="res://scenes/plant scenes/palmito_1.tscn" id="10_choun"]
 [ext_resource type="PackedScene" uid="uid://cxkepvewsl7nn" path="res://Assets/Models/interest objects/chicharra.glb" id="11_a8y0u"]
 [ext_resource type="AudioStream" uid="uid://drsym2t8c3bx8" path="res://Assets/sounds/open stone sounds/levantarroca3.mp3" id="11_ids8r"]
 [ext_resource type="PackedScene" uid="uid://bei5ild66h7o4" path="res://Assets/Models/rocks2/piedras_12.tscn" id="12_2cjbq"]
@@ -46,7 +44,6 @@
 [ext_resource type="AudioStream" uid="uid://c51f4o3q8tao8" path="res://Assets/sounds/still life sounds/stillife_subtleoutdoorssound.mp3" id="28_tel4y"]
 [ext_resource type="PackedScene" uid="uid://d0khxml85jfpm" path="res://Assets/Models/rocks2/piedras_8.tscn" id="29_2cjbq"]
 [ext_resource type="AudioStream" uid="uid://igfha0f6jcof" path="res://Assets/sounds/close stone sounds/dejarcaerroca2.mp3" id="30_dgi5k"]
-[ext_resource type="ArrayMesh" uid="uid://dr6heowlm7p8q" path="res://Assets/Models/Rocks/rock08.res" id="31_5q0nq"]
 [ext_resource type="PackedScene" uid="uid://iinpjctfxdj2" path="res://Assets/Models/rocks2/piedras_13.tscn" id="32_dgi5k"]
 [ext_resource type="PackedScene" uid="uid://c8d275g6sukkk" path="res://Assets/Models/rocks2/piedras_17.tscn" id="32_j8jky"]
 [ext_resource type="PackedScene" uid="uid://dak6yq05c0n7h" path="res://Assets/Models/rocks2/piedras_16.tscn" id="32_kmb1v"]
@@ -61,9 +58,10 @@
 [ext_resource type="AudioStream" uid="uid://vhyk6enwmkmm" path="res://Assets/sounds/still life sounds/stillife_susurros.mp3" id="57_tm6hj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sugp2"]
-sky_top_color = Color(0.547212, 0.772355, 0.975433, 1)
+sky_top_color = Color(0.595252, 0.7869779, 0.9542237, 1)
 sky_horizon_color = Color(0.301448, 0.145851, 0.0307396, 1)
-sky_energy_multiplier = 1.5
+sky_curve = 0.053033147
+sky_energy_multiplier = 2.0
 ground_bottom_color = Color(0.311417, 0.213569, 0.158244, 1)
 ground_horizon_color = Color(0.550989, 0.513942, 0.485285, 1)
 ground_curve = 0.16
@@ -74,9 +72,17 @@ sky_material = SubResource("ProceduralSkyMaterial_sugp2")
 
 [sub_resource type="Environment" id="Environment_tbgi4"]
 background_mode = 2
-background_energy_multiplier = 0.4
+background_energy_multiplier = 0.51
 sky = SubResource("Sky_jyhfs")
+ambient_light_source = 3
+ambient_light_color = Color(0.5630505, 0.69440854, 0.84150964, 1)
 glow_enabled = true
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_tm6hj"]
+radius = 0.8696386
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1v6qk"]
+size = Vector3(3.2087402, 0.49908447, 1.9493408)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d5e27"]
 resource_name = "Material"
@@ -666,19 +672,12 @@ environment = SubResource("Environment_tbgi4")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.35063, 0.712341, -0.60797, 0.0312968, 0.639909, 0.767813, 0.935991, -0.288246, 0.202078, 0, 0, 0)
-light_color = Color(0.93287, 0.919054, 0.868994, 1)
-shadow_enabled = true
-
-[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.86410755, -0.5000434, 0.057227865, -0.14137235, 0.35026816, 0.92591906, -0.4830448, 0.7920032, -0.37336165, 0.031885147, -0.051357985, 0)
-light_color = Color(0.35138944, 0.46382344, 0.5292352, 1)
+light_color = Color(0.886593, 0.88624585, 0.8208898, 1)
+light_energy = 0.825
 shadow_enabled = true
 
 [node name="ProtoController" parent="." instance=ExtResource("5_tbgi4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.228931, 1.6960211, -8.801603)
-
-[node name="ground" parent="." instance=ExtResource("5_tefeu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -19.419, 0)
 
 [node name="State Machine" type="Node3D" parent="."]
 script = ExtResource("4_jyhfs")
@@ -688,7 +687,8 @@ transform = Transform3D(1, 0, 0, 0, 0.999989, -0.00467747, 0, 0.00467747, 0.9999
 still_life_sound = ExtResource("5_bu4jf")
 
 [node name="CollisionShape3D" parent="StoneScene/Area3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1.0000111, -5.1688403e-08, 0, 5.1688403e-08, 1.0000111, 0.052578926, -0.0014778376, 1.5944777)
+transform = Transform3D(1, 0, 0, 0, 1.0000111, -1.4062971e-07, 0, 1.4062971e-07, 1.0000111, 0.052578926, -0.001478076, 1.5945959)
+shape = SubResource("SphereShape3D_tm6hj")
 
 [node name="HingeScene" parent="StoneScene" instance=ExtResource("23_pm3ni")]
 transform = Transform3D(1, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, -0.15211678, -0.0009753704, -0.2085123)
@@ -768,6 +768,12 @@ still_life_sound = ExtResource("25_dnhof")
 
 [node name="piedras17" parent="StoneScene39/HingeScene" instance=ExtResource("32_j8jky")]
 transform = Transform3D(0.70551014, 0.0007926265, 0.16945449, -0.0007926261, 0.72557634, -9.385613e-05, -0.1694544, -9.3854265e-05, 0.7055115, -0.09558678, 0.25272894, 0.6058655)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="StoneScene39"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StoneScene39/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1.0000111, -1.3643876e-07, 0, 1.3643876e-07, 1.0000111, 0, -0.25045776, 0.47467232)
+shape = SubResource("BoxShape3D_1v6qk")
 
 [node name="StoneScene45" parent="." instance=ExtResource("5_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 0.999989, -0.00467747, 0, 0.00467747, 0.999989, -30.007856, -3.0930333, -10.8612995)
@@ -1093,9 +1099,6 @@ autoplay = "crawling"
 
 [node name="wasp_nest" parent="." instance=ExtResource("12_jkv2x")]
 transform = Transform3D(0.761237, 0, 0, 0, 0.761237, 0, 0, 0, 0.761237, 18.544214, 1.0913666, -3.3759634)
-
-[node name="palmito1" parent="." instance=ExtResource("10_choun")]
-transform = Transform3D(1.85884, 0, 1.02051, 0, 2.12055, 0, -1.02051, 0, 1.85884, 6.42045, -0.843046, 0.345718)
 
 [node name="stone_wall2" parent="." instance=ExtResource("14_muem4")]
 transform = Transform3D(-0.196818, -0.180511, 0.96368, -0.0255503, 0.983516, 0.179009, -0.980107, 0.0106098, -0.198186, -9.98797, -1.4584, -20.5589)
@@ -1603,10 +1606,8 @@ still_life_sound = ExtResource("9_0loja")
 
 [node name="HingeScene" parent="StoneScene10" instance=ExtResource("23_pm3ni")]
 
-[node name="Rock08" type="MeshInstance3D" parent="StoneScene10/HingeScene"]
-transform = Transform3D(0.038864013, -0.084711045, -0.49222937, -0.11145764, 0.47979644, -0.09137152, 0.4868705, 0.116600186, 0.018374436, -0.026046753, 0.18859923, 0.64568716)
-mesh = ExtResource("31_5q0nq")
-skeleton = NodePath("../..")
+[node name="piedras12" parent="StoneScene10/HingeScene" instance=ExtResource("12_2cjbq")]
+transform = Transform3D(0.3015057, 0, 0.53910536, 0.060561, 0.6137797, -0.033869985, -0.535693, 0.069388844, 0.29959726, 0, 0.22297029, 0.5145965)
 
 [node name="StoneScene9" parent="." instance=ExtResource("5_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.931467, -2.709938, 9.807912)

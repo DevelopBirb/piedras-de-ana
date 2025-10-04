@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cdv1sltjfwufi"
 path.s3tc="res://.godot/imported/charco_esqueleto_tierras.jpg-b62a8166a0d538fdcbb516ce14ae13a3.s3tc.ctex"
+path.etc2="res://.godot/imported/charco_esqueleto_tierras.jpg-b62a8166a0d538fdcbb516ce14ae13a3.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/Models/interest objects/charco_esqueleto_tierras.jpg"
-dest_files=["res://.godot/imported/charco_esqueleto_tierras.jpg-b62a8166a0d538fdcbb516ce14ae13a3.s3tc.ctex"]
+dest_files=["res://.godot/imported/charco_esqueleto_tierras.jpg-b62a8166a0d538fdcbb516ce14ae13a3.s3tc.ctex", "res://.godot/imported/charco_esqueleto_tierras.jpg-b62a8166a0d538fdcbb516ce14ae13a3.etc2.ctex"]
 
 [params]
 

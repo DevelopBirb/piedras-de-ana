@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cu0k24naw7qpv"
 path.s3tc="res://.godot/imported/palmito1_plantas1.png-0da74dbf3202db7c6590389e4c3101fb.s3tc.ctex"
+path.etc2="res://.godot/imported/palmito1_plantas1.png-0da74dbf3202db7c6590389e4c3101fb.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/Materials/palmito1_plantas1.png"
-dest_files=["res://.godot/imported/palmito1_plantas1.png-0da74dbf3202db7c6590389e4c3101fb.s3tc.ctex"]
+dest_files=["res://.godot/imported/palmito1_plantas1.png-0da74dbf3202db7c6590389e4c3101fb.s3tc.ctex", "res://.godot/imported/palmito1_plantas1.png-0da74dbf3202db7c6590389e4c3101fb.etc2.ctex"]
 
 [params]
 

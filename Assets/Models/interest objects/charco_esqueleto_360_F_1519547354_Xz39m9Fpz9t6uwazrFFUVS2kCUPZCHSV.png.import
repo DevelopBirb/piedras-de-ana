@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dn08gn1yd62b3"
 path.s3tc="res://.godot/imported/charco_esqueleto_360_F_1519547354_Xz39m9Fpz9t6uwazrFFUVS2kCUPZCHSV.png-b871cc9fbe044ac67ba5a695fd244f50.s3tc.ctex"
+path.etc2="res://.godot/imported/charco_esqueleto_360_F_1519547354_Xz39m9Fpz9t6uwazrFFUVS2kCUPZCHSV.png-b871cc9fbe044ac67ba5a695fd244f50.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/Models/interest objects/charco_esqueleto_360_F_1519547354_Xz39m9Fpz9t6uwazrFFUVS2kCUPZCHSV.png"
-dest_files=["res://.godot/imported/charco_esqueleto_360_F_1519547354_Xz39m9Fpz9t6uwazrFFUVS2kCUPZCHSV.png-b871cc9fbe044ac67ba5a695fd244f50.s3tc.ctex"]
+dest_files=["res://.godot/imported/charco_esqueleto_360_F_1519547354_Xz39m9Fpz9t6uwazrFFUVS2kCUPZCHSV.png-b871cc9fbe044ac67ba5a695fd244f50.s3tc.ctex", "res://.godot/imported/charco_esqueleto_360_F_1519547354_Xz39m9Fpz9t6uwazrFFUVS2kCUPZCHSV.png-b871cc9fbe044ac67ba5a695fd244f50.etc2.ctex"]
 
 [params]
 
